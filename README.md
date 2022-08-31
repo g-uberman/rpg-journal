@@ -1,2 +1,2 @@
 # rpg-journal
-Roleplaying party journal (training)
+A fantasy-themed **roleplaying party journal** for logging party history and character information.
