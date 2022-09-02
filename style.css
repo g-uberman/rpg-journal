@@ -25,6 +25,7 @@ nav a {
     color: #fff;
     display: block;
     padding: 10px;
+    font-family: sofia;
 }
 
 nav a.hover {
