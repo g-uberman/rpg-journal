@@ -22,14 +22,14 @@ nav ul {
 nav a {
     text-decoration: none;
     text-align: center;
-    color: #fff;
+    color: #ddd;
     display: block;
     padding: 10px;
     font-family: sofia;
 }
 
-nav a.hover {
-    backgrond-color: #555;
+nav a:hover {
+    color: #fff;
 }
 
 /* Flex for large screens */
