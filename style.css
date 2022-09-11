@@ -12,24 +12,19 @@ body {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+}
 
+nav {
+    background: #000;
 }
 
 .content {
-    position: relative;
-    min-height: 2000px;
     padding: 30px 100px;
     border: 1px solid #000;
 }
 
 /* Menu base styles: */
 
-nav {
-    background: #000;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
 
 nav ul {
     list-style-type: none;
@@ -57,5 +52,16 @@ nav a:hover {
 
     nav li {
         flex: 1 1 0;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        min-height: 2000px;
     }
 }
