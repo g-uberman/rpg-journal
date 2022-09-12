@@ -25,6 +25,22 @@ main {grid-area: m;}
 header {grid-area: h;}
 footer {grid-area: f;}
 
+/* AREA STYLING */
+header, footer {
+    height: 100px;
+    border: 1px dotted grey;
+}
+
+nav {
+    height: 100px;
+    border: 1px dotted grey;
+}
+
+main {
+    min-height: 100px;
+    border: 1px dotted grey;
+}
+
 /* .wrapper {
     width: 100%;
     max-width: 960px;
