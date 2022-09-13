@@ -18,6 +18,9 @@ body {
     'n'
     'm'
     'f';
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 nav {grid-area: n;}
@@ -29,72 +32,17 @@ footer {grid-area: f;}
 header, footer {
     height: 100px;
     border: 1px dotted grey;
+    padding: 10px 50px;
 }
 
 nav {
     height: 100px;
     border: 1px dotted grey;
+    padding: 10px 50px;
 }
 
 main {
     min-height: 100px;
     border: 1px dotted grey;
+    padding: 10px 50px;
 }
-
-/* .wrapper {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-nav {
-    background: #000;
-}
-
-.content {
-    padding: 30px 100px;
-    border: 1px solid #000;
-} */
-
-/* Menu base styles: */
-
-/* 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    text-align: center;
-    color: #ddd;
-    display: block;
-    padding: 10px;
-    font-family: sofia;
-}
-
-nav a:hover {
-    color: #fff;
-} */
-
-/* Flex for large screens */
-/* @media screen and (min-width: 768px) {
-    nav ul {
-        display: flex;
-    }
-
-    nav li {
-        flex: 1 1 0;
-    }
-
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .content {
-        position: relative;
-        min-height: 2000px;
-    }
-} */
