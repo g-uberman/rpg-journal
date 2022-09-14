@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #eee;
+    background: #aaa;
 }
 
 /* GRID BASE (mobile layout) */
@@ -18,7 +18,7 @@ body {
     'n'
     'm'
     'f';
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -30,9 +30,17 @@ footer {grid-area: f;}
 
 /* AREA STYLING */
 header, footer {
-    height: 100px;
+    height: 50px;
     border: 1px dotted grey;
     padding: 10px 50px;
+    background: linear-gradient(#fff, #aaa);
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    height: 0;
+    background: #eee;
 }
 
 nav {
@@ -44,5 +52,19 @@ nav {
 article {
     min-height: 100px;
     border: 1px dotted grey;
-    padding: 10px 50px;
+    padding: 10px 50px 100px;
+}
+
+/* SCROLL ANIMATION */
+main {
+    overflow: hidden;
+    animation: open 1s ease 1 forwards;
+    animation-delay: 0.3s;
+    transition: 2s;
+}
+
+@keyframes open {
+    0% {height: 0px;}
+    50% {height: 700px;}
+    100% {height: auto;}
 }
