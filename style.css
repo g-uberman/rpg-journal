@@ -60,7 +60,6 @@ main {
     overflow: hidden;
     animation: open 1s ease 1 forwards;
     animation-delay: 0.3s;
-    transition: 2s;
 }
 
 @keyframes open {
