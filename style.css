@@ -56,8 +56,12 @@ article {
 }
 
 /* NAV */
-ul {
+nav ul {
     list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* SCROLL ANIMATION */
