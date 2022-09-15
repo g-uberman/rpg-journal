@@ -55,6 +55,11 @@ article {
     padding: 10px 50px 100px;
 }
 
+/* NAV */
+ul {
+    list-style: none;
+}
+
 /* SCROLL ANIMATION */
 main {
     overflow: hidden;
