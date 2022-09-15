@@ -8,6 +8,12 @@ body {
     background: #aaa;
 }
 
+/* FONTS */
+a, a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
@@ -30,7 +36,7 @@ footer {grid-area: f;}
 
 /* AREA STYLING */
 header, footer {
-    height: 50px;
+    height: 70px;
     border: 1px dotted grey;
     padding: 10px 50px;
     background: linear-gradient(#fff, #aaa);
@@ -44,7 +50,7 @@ main {
 }
 
 nav {
-    height: 100px;
+    height: 50px;
     border: 1px dotted grey;
     padding: 10px 50px;
 }
@@ -62,6 +68,10 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav a, nav a:visited {
+    font-weight: bold;
 }
 
 /* SCROLL ANIMATION */
