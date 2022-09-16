@@ -5,7 +5,8 @@
 }
 
 body {
-    background: #aaa;
+    background: url(img/vecteezy_drawing-cartoon-art-of-wood-texture-pattern-landscape-eps10_.jpg);
+    background-size: fill;
 }
 
 /* FONTS */
