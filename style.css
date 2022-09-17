@@ -46,8 +46,19 @@ header, footer {
 main {
     max-width: 700px;
     margin: 0 auto;
-    height: 0;
     background: #eee;
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: max-height 0.7s;
+    -moz-transition: max-height 0.7s;
+    transition: max-height 0.7s;
+}
+
+main.open {
+    max-height: 1000px;
+    -webkit-transition: max-height 0.7s;
+    -moz-transition: max-height 0.7s;
+    transition: max-height 0.7s;
 }
 
 nav {
@@ -76,7 +87,7 @@ nav a, nav a:visited {
 }
 
 /* SCROLL ANIMATION */
-main {
+/* main {
     overflow: hidden;
     animation: open 1s ease 1 forwards;
     animation-delay: 0.3s;
@@ -86,4 +97,4 @@ main {
     0% {height: 0px;}
     50% {height: 500px;}
     100% {height: auto;}
-}
+} */
