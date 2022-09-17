@@ -49,13 +49,8 @@ main {
     background: #eee;
     max-height: 0px;
     overflow: hidden;
-    -webkit-transition: max-height 0.7s;
-    -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s;
-}
-
-main.open {
-    max-height: 1000px;
+    animation: open 20s ease 1 forwards;
+    animation-delay: 0.4s;
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
     transition: max-height 0.7s;
@@ -87,14 +82,8 @@ nav a, nav a:visited {
 }
 
 /* SCROLL ANIMATION */
-/* main {
-    overflow: hidden;
-    animation: open 1s ease 1 forwards;
-    animation-delay: 0.3s;
-}
 
 @keyframes open {
-    0% {height: 0px;}
-    50% {height: 500px;}
-    100% {height: auto;}
-} */
+    0% {max-height: 0px;}
+    100% {max-height: 99999px;}
+}
