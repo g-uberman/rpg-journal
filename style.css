@@ -18,21 +18,18 @@ a, a:visited {
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 4fr;
+    grid-template-columns: 20px 1fr 20px;
     grid-template-areas: 
     'h h h'
-    'l n r'
     'l m r'
     'f f f';
     max-width: 720px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-nav {grid-area: n;}
-main {grid-area: m;}
 header {grid-area: h;}
+main {grid-area: m;}
 footer {grid-area: f;}
 .border {grid-area: r;}
 .border.L {grid-area: l;}
@@ -41,7 +38,8 @@ footer {grid-area: f;}
 header, footer {
     height: 70px;
     padding: 10px 50px;
-    border: 3px solid #000;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
     background: url(img/header-shadow.png), url(img/mkwt.jpg);
     background-size: cover, cover;
     background-position-y: bottom, center;
@@ -52,30 +50,25 @@ header, footer {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     max-width: 700px;
     margin: 0 auto;
+    padding: 5px 20px;
     background: #fff;
     max-height: 0px;
     overflow: hidden;
     animation: open 20s ease 1 forwards;
     animation-delay: 0.4s;
-
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
     transition: max-height 0.7s;
 }
 
-nav {
-    height: 50px;
-    padding: 0px 50px;
-    margin: 10px 50px;
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
-}
-
 article {
     min-height: 100px;
-    padding: 10px 50px 100px;
+    margin-bottom: 50px;
 }
 
 .border {
@@ -91,6 +84,13 @@ article {
 }
 
 /* NAV */
+
+nav {
+    height: 50px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
 nav ul {
     list-style: none;
     height: 100%;
@@ -109,3 +109,5 @@ nav a, nav a:visited {
     0% {max-height: 0px;}
     100% {max-height: 99999px;}
 }
+
+/* MEDIA */
