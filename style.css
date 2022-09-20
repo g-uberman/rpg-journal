@@ -26,6 +26,7 @@ a, a:visited {
     max-width: 720px;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 header {grid-area: h;}
@@ -36,8 +37,7 @@ footer {grid-area: f;}
 
 /* AREA STYLING */
 header, footer {
-    height: 70px;
-    padding: 10px 50px;
+    height: 50px;
     border-top: 3px solid #000;
     border-bottom: 3px solid #000;
     background: url(img/header-shadow.png), url(img/mkwt.jpg);
@@ -52,12 +52,11 @@ header, footer {
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     max-width: 700px;
     margin: 0 auto;
-    padding: 5px 20px;
     background: #fff;
     max-height: 0px;
+    min-height: 75vh;
     overflow: hidden;
     animation: open 20s ease 1 forwards;
     animation-delay: 0.4s;
@@ -68,7 +67,8 @@ main {
 
 article {
     min-height: 100px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin: 5px 20px;
 }
 
 .border {
@@ -86,17 +86,16 @@ article {
 /* NAV */
 
 nav {
-    height: 50px;
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
+    margin: 5px 20px;
 }
 
 nav ul {
     list-style: none;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
 }
 
 nav a, nav a:visited {
@@ -111,3 +110,30 @@ nav a, nav a:visited {
 }
 
 /* MEDIA */
+
+@media screen and (min-width: 700px) {
+    #grid-container {
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    header, footer {
+        height: 70px;
+        border: 3px solid #000;
+    }
+
+    main {
+        flex-direction: row;
+        padding-right: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    article, nav {
+        margin-top: 25px;
+    }
+}
