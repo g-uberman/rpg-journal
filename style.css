@@ -10,6 +10,14 @@ body {
 }
 
 /* FONTS */
+body {
+    font-family: 'Gideon Roman', cursive;
+}
+
+nav {
+    font-family: 'Metamorphous', cursive;    
+}
+
 a, a:visited {
     text-decoration: none;
     color: #000;
@@ -87,6 +95,7 @@ article {
 
 nav {
     margin: 5px 20px;
+    text-transform: uppercase;
 }
 
 nav ul {
