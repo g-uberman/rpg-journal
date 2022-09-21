@@ -15,12 +15,13 @@ body {
 }
 
 nav {
-    font-family: 'Metamorphous', cursive;    
+    font-family: 'Metamorphous', cursive;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: #000;
+p {
+    margin-bottom: 1em;
 }
 
 p:first-child:first-letter {
@@ -30,6 +31,11 @@ p:first-child:first-letter {
     line-height: 0.95em;
     padding-right: 0.1em;
     padding-left: 0.1em;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #000;
 }
 
 /* GRID BASE (mobile layout) */
@@ -104,14 +110,15 @@ article {
 
 nav {
     margin: 5px 20px;
-    text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    column-gap: 25px;
     border-top: 3px solid #000;
     border-bottom: 3px solid #000;
 }
