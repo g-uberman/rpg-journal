@@ -79,7 +79,6 @@ main {
     margin: 0 auto;
     background: #fff;
     max-height: 0px;
-    min-height: 75vh;
     overflow: hidden;
     animation: open 20s ease 1 forwards;
     animation-delay: 0.4s;
@@ -130,8 +129,9 @@ nav a, nav a:visited {
 /* SCROLL ANIMATION */
 
 @keyframes open {
-    0% {max-height: 0px;}
-    100% {max-height: 99999px;}
+    0% {max-height: 0px; min-height: 1vh;}
+    2% {min-height: 75vh;}
+    100% {max-height: 99999px; min-height: 75vh;}
 }
 
 /* MEDIA */
