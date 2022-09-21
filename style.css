@@ -23,6 +23,15 @@ a, a:visited {
     color: #000;
 }
 
+p:first-child:first-letter {
+    float: left;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 0.95em;
+    padding-right: 0.1em;
+    padding-left: 0.1em;
+}
+
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
