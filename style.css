@@ -86,9 +86,9 @@ main {
     max-width: 700px;
     margin: 0 auto;
     background: #fff;
-    /* max-height: 0px; */
+    max-height: 0px;
     overflow: hidden;
-    /* animation: open 20s ease 1 forwards; */
+    animation: open 20s ease 1 forwards;
     animation-delay: 0.4s;
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
