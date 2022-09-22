@@ -31,6 +31,8 @@ p:first-child:first-letter {
     line-height: 0.95em;
     padding-right: 0.1em;
     padding-left: 0.1em;
+    font-family: 'Metamorphous', cursive;
+    font-weight: bold;
 }
 
 a, a:visited {
@@ -84,9 +86,9 @@ main {
     max-width: 700px;
     margin: 0 auto;
     background: #fff;
-    max-height: 0px;
+    /* max-height: 0px; */
     overflow: hidden;
-    animation: open 20s ease 1 forwards;
+    /* animation: open 20s ease 1 forwards; */
     animation-delay: 0.4s;
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
@@ -114,18 +116,37 @@ article {
 /* NAV */
 
 nav {
-    margin: 5px 20px;
+    margin: 15px 20px 5px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    width: calc(100vw - 150px);
+    margin: 0 auto;
     flex-wrap: wrap;
     align-items: center;
     column-gap: 25px;
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
+    margin-bottom: 10px;
+    /* border-top: 3px solid #000;
+    border-bottom: 3px solid #000; */
+}
+
+nav ul::before {
+    content: "†";
+    transform: rotate(90deg);
+    font-size: 1.5em;
+    position: absolute;
+    left: 50px;
+}
+
+nav ul::after {
+    content: "†";
+    transform: rotate(-90deg);
+    font-size: 1.5em;
+    position: absolute;
+    right: 50px;
 }
 
 nav a, nav a:visited {
@@ -160,8 +181,23 @@ nav a, nav a:visited {
     nav ul {
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
         gap: 10px;
         padding: 10px 0;
+    }
+
+    nav ul::before {
+        position: initial;
+        content: "†";
+        transform: rotate(180deg);
+        font-size: 1.5em;
+    }
+    
+    nav ul::after {
+        position: initial;
+        content: "†";
+        font-size: 1.5em;
+        transform: none;
     }
 
     article, nav {
