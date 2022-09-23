@@ -43,11 +43,11 @@ a, a:visited {
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    'h h h'
-    'l m r'
-    'f f f';
+    'h'
+    'm'
+    'f';
     max-width: 720px;
     margin: 0 auto;
     margin-top: 10px;
@@ -57,8 +57,8 @@ a, a:visited {
 header {grid-area: h;}
 main {grid-area: m;}
 footer {grid-area: f;}
-.border {grid-area: r;}
-.border.L {grid-area: l;}
+/* .border {grid-area: r;}
+.border.L {grid-area: l;} */
 
 /* AREA STYLING */
 header, footer {
@@ -85,7 +85,12 @@ main {
     flex-direction: column;
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
+
+    background: url(img/scroll-side-R.png), url(img/scroll-side-L.png), url(img/scroll-center.png);
+    background-size: fill, fill, fill;
+    background-position: right, left, center;
+    background-repeat: repeat-y, repeat-y, repeat-y;
+
     max-height: 0px;
     overflow: hidden;
     animation: open 20s ease 1 forwards;
@@ -164,9 +169,6 @@ nav a, nav a:visited {
 /* MEDIA */
 
 @media screen and (min-width: 700px) {
-    #grid-container {
-        grid-template-columns: 30px 1fr 30px;
-    }
 
     header, footer {
         height: 70px;
