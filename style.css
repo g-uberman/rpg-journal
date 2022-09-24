@@ -7,6 +7,7 @@
 body {
     background: url(img/vecteezy_drawing-cartoon-art-of-wood-texture-pattern-landscape-eps10_.jpg);
     background-size: fill;
+    color: #4d3b32
 }
 
 /* FONTS */
@@ -37,7 +38,7 @@ p:first-child:first-letter {
 
 a, a:visited {
     text-decoration: none;
-    color: #000;
+    color: #4d3b32
 }
 
 /* GRID BASE (mobile layout) */
@@ -106,18 +107,6 @@ article {
     margin: 5px 20px;
 }
 
-.border {
-    background: url(img/scroll-side.png);
-    background-position: right;
-    background-repeat: repeat-y;
-    background-position-x: left;
-
-}
-
-.border.L {
-    transform: rotate(180deg);
-}
-
 /* NAV */
 
 nav {
@@ -134,8 +123,6 @@ nav ul {
     align-items: center;
     column-gap: 25px;
     margin-bottom: 10px;
-    /* border-top: 3px solid #000;
-    border-bottom: 3px solid #000; */
 }
 
 nav ul::before {
@@ -186,6 +173,7 @@ nav a, nav a:visited {
         width: 100%;
         gap: 10px;
         padding: 10px 0;
+        margin-left: 15px;
     }
 
     nav ul::before {
