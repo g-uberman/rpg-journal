@@ -87,10 +87,10 @@ main {
     max-width: 700px;
     margin: 0 auto;
 
-    background: url(img/scroll-side-R.png), url(img/scroll-side-L.png), url(img/scroll-center.png);
-    background-size: fill, fill, fill;
-    background-position: right, left, center;
-    background-repeat: repeat-y, repeat-y, repeat-y;
+    background: url(img/scroll-side-R.png), url(img/scroll-side-L.png);
+    background-size: fill, fill;
+    background-position: right, left;
+    background-repeat: repeat-y, repeat-y;
 
     max-height: 0px;
     overflow: hidden;
@@ -154,6 +154,14 @@ nav a, nav a:visited {
 }
 
 /* MEDIA */
+@media screen and (min-width: 475px) {
+    main {
+        background: url(img/scroll-side-R.png), url(img/scroll-side-L.png), url(img/scroll-center.png);
+        background-size: fill, fill, fill;
+        background-position: right, left, center;
+        background-repeat: repeat-y, repeat-y, repeat-y;
+    }
+}
 
 @media screen and (min-width: 700px) {
 
