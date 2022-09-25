@@ -103,7 +103,7 @@ main {
 
 article {
     min-height: 100px;
-    padding-bottom: 50px;
+    padding: 0 20px 50px 20px;
     margin: 5px 20px;
 }
 
