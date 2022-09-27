@@ -192,7 +192,12 @@ nav a, nav a:visited {
         transform: none;
     }
 
-    article, nav {
+    article {
+        margin-top: 25px;
+        margin-left: 0;
+    }
+
+    nav {
         margin-top: 25px;
     }
 }
