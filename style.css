@@ -57,8 +57,6 @@ a, a:visited {
 header {grid-area: h;}
 main {grid-area: m;}
 footer {grid-area: f;}
-/* .border {grid-area: r;}
-.border.L {grid-area: l;} */
 
 /* AREA STYLING */
 header, footer {
