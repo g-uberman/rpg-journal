@@ -40,6 +40,14 @@ a, a:visited {
     color: #4d3b32
 }
 
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
