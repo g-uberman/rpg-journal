@@ -48,10 +48,6 @@ h4 {
     margin-bottom: 5px;
 }
 
-label #title {
-    font-weight: bold;
-}
-
 /* GRID BASE (mobile layout) */
 #grid-container {
     display: grid;
@@ -79,9 +75,9 @@ header, footer {
     background-size: cover, cover, cover;
     background-position-y: top, bottom, center;
     z-index: 1;
-    -webkit-box-shadow: 10px 20px 0px 0px #00000033;
-    -moz-box-shadow: 10px 20px 0px 0px #00000033;
-    box-shadow: 10px 20px 0px 0px #00000033;
+    -webkit-box-shadow: 10px 20px 5px 0px #00000033;
+    -moz-box-shadow: 10px 20px 5px 0px #00000033;
+    box-shadow: 10px 20px 5px 0px #00000033;
 }
 
 main {
@@ -152,6 +148,10 @@ nav a, nav a:visited {
 
 .form-control {
     margin-bottom: 20px;
+}
+
+#title {
+    width: 100%;
 }
 
 /* SCROLL ANIMATION */
