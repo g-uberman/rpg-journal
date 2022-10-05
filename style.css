@@ -7,7 +7,7 @@
 body {
     background: url(img/wood.jpg);
     background-size: fill;
-    color: #4d3b32;
+    color: #5d534d;
 }
 
 /* FONTS */
@@ -37,7 +37,7 @@ p:first-child:first-letter {
 
 a, a:visited {
     text-decoration: none;
-    color: #4d3b32
+    color: #5d534d
 }
 
 h1, h2, h3 {
