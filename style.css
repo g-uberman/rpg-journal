@@ -160,6 +160,14 @@ nav a, nav a:visited {
     width: 100%;
 }
 
+input#title {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
 /* SCROLL ANIMATION */
 
 @keyframes open {
