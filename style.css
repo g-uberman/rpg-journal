@@ -89,7 +89,7 @@ footer {
 main {
     display: flex;
     flex-direction: column;
-    max-width: 700px;
+    width: 100%;
     margin: 0 auto;
 
     background: url(img/scroll-side-R.png), url(img/scroll-side-L.png);
