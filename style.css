@@ -106,7 +106,7 @@ main {
     transition: max-height 0.7s;
 }
 
-article {
+secton {
     min-height: 100px;
     padding: 0 20px 50px 20px;
     margin: 5px 20px;
@@ -222,7 +222,7 @@ textarea {
         transform: none;
     }
 
-    article {
+    section {
         margin-top: 25px;
         margin-left: 0;
     }
