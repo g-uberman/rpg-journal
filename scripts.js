@@ -4,6 +4,14 @@ const postList = document.getElementById("postList");
 
 // FETCH
 
+const createBox = function (post) {
+    const postBox = document.createElement("div")
+    const postTitle = document.createElement("h3")
+    postTitle.innerText = post.title;
+    postBox.append(postTitle);
+    postList.append(postBox);
+}
+
 const fetchPosts = function () {
     fetch('https://dummyjson.com/posts', {
     method: "GET"})
@@ -14,7 +22,7 @@ const fetchPosts = function () {
         posts.forEach((post) => {
             console.log(post);
             console.log("test");
-            // createBox(post);
+            createBox(post);
           });
     })
 }
