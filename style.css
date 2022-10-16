@@ -197,6 +197,7 @@ textarea {
     main {
         flex-direction: row;
         padding-right: 30px;
+        padding-bottom: 50px;
     }
 
     nav ul {
