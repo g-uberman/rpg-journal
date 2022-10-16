@@ -1,9 +1,3 @@
-// const main = document.getElementsByTagName("main")[0];
+// SELECTORS
 
-// function open() {
-//     main.classList.add("open");
-// }
-
-// window.onload {
-//     setTimeout(open(), 5000)
-// }
+const postList = document.getElementById("postList");
