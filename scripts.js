@@ -7,8 +7,13 @@ const postList = document.getElementById("postList");
 const createBox = function (post) {
     const postBox = document.createElement("div")
     const postTitle = document.createElement("h3")
-    postTitle.innerText = post.title;
+    const postDescription = document.createElement("p")
+
+    postTitle.innerText = post.id + ". " + post.title;
+    postDescription.innerText = post.body;
+
     postBox.append(postTitle);
+    postBox.append(postDescription);
     postList.append(postBox);
 }
 
