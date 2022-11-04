@@ -25,8 +25,6 @@ const fetchPosts = function () {
         const posts = result?.posts || [];
         console.log(result);
         posts.forEach((post) => {
-            console.log(post);
-            console.log("test");
             createBox(post);
           });
     })
