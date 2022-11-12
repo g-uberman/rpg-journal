@@ -41,14 +41,15 @@ export const StyledNavBar = styled.nav`
   a,
   a:visited {
     font-weight: bold;
+    transition: text-shadow 1s;
   }
 
   a:hover {
-    text-shadow: 0px 0px 5px #ffc32530;
+    text-shadow: 0px 0px 5px #be2a0430;
+    color: #5d534d90;
     transition: text-shadow 0.5s;
-    background: url(${lava});
+    background-image: url(${lava});
     background-size: cover;
-    -webkit-text-fill-color: #00000030;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -57,14 +58,13 @@ export const StyledNavBar = styled.nav`
 
   a.selectedNav {
     text-shadow: 0px 0px 5px #ffc32580;
-    background: url(${lava});
+    color: #00000000;
+    background-image: url(${lava});
     background-size: cover;
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     animation: animateLava 90s infinite;
-    transition: text-shadow 1s;
   }
 
   @keyframes animateLava {
