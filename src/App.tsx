@@ -15,7 +15,7 @@ import {
   StyledFooter,
   StyledBorderRight,
   StyledBorderLeft,
-} from "./Components/Styles/Container.styles";
+} from "./Components/Styles/App.styles";
 
 function App() {
   return (

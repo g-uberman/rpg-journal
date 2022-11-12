@@ -4,6 +4,7 @@ import { StyledNavBar } from "./Styles/NavBar.styles";
 import { activeStyle } from "./Styles/NavBar.styles";
 
 export const NavBar = () => {
+  let activeClassName ="selectedNav";
 
   return (
     <StyledNavBar>
@@ -11,31 +12,39 @@ export const NavBar = () => {
         <li>
           <NavLink
             to="/party"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={({ isActive }) =>
+              isActive ? activeClassName : undefined
+            }
           >
             Drużyna
           </NavLink>
         </li>
         <li>
-        <NavLink
+          <NavLink
             to="/history"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={({ isActive }) =>
+              isActive ? activeClassName : undefined
+            }
           >
             Historia
           </NavLink>
         </li>
         <li>
-        <NavLink
+          <NavLink
             to="/npc"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={({ isActive }) =>
+              isActive ? activeClassName : undefined
+            }
           >
             Mieszkańcy Barsawii
           </NavLink>
         </li>
         <li>
-        <NavLink
+          <NavLink
             to="/quotes"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            className={({ isActive }) =>
+              isActive ? activeClassName : undefined
+            }
           >
             Kwiatki
           </NavLink>
