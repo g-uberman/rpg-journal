@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export let activeStyle = {
+    textDecoration: "underline",
+  };
+
 export const StyledNavBar = styled.nav`
   margin: 15px 20px 5px;
   text-align: center;
