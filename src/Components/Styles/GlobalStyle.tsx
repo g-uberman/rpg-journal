@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import background from '../../img/wood.jpg'
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -8,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-
+    background: url(${background});
+    background-size: fill;
+    color: #5d534d;
 }
 `
