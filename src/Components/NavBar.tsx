@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
-import { activeStyle } from "./Styles/NavBar.styles";
 
 export const NavBar = () => {
   let activeClassName ="selectedNav";

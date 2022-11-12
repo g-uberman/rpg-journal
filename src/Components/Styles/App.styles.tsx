@@ -39,18 +39,12 @@ export const StyledContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-areas: "n" "s";
     width: 100%;
+    min-height: calc(80vh - 20px);
     margin: 0 auto;
     background: url(${scrollSideR}), url(${scrollSideL});
     background-size: fill, fill;
     background-position: right, left;
     background-repeat: repeat-y, repeat-y;
-    /* max-height: 0px; */
-    /* overflow: hidden; */
-    /* animation: open 20s ease 1 forwards;
-    animation-delay: 0.4s;
-    -webkit-transition: max-height 0.7s;
-    -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s; */
   }
 
   section {
