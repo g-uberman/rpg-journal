@@ -44,8 +44,15 @@ export const StyledNavBar = styled.nav`
   }
 
   a:hover {
-    text-shadow: 0px 0px 5px #ffc325;
+    text-shadow: 0px 0px 5px #ffc32540;
     transition: text-shadow 0.5s;
+    background: url(${lava});
+    background-size: cover;
+    -webkit-text-fill-color: #00000040;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    animation: animateLava 90s infinite;
   }
 
   a.selectedNav {
