@@ -49,7 +49,7 @@ export const StyledContainer = styled.div`
 
   section {
     min-height: 100px;
-    padding: 0 20px 50px 20px;
+    padding: 0 25px 50px 25px;
     margin: 5px 20px;
   }
 
@@ -71,9 +71,8 @@ export const StyledContainer = styled.div`
     }
 
     main {
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 160px 1fr;
       grid-template-areas: "n s";
-      column-gap: 20px;
       padding-right: 30px;
       padding-bottom: 50px;
     }
@@ -83,8 +82,7 @@ export const StyledContainer = styled.div`
       justify-content: space-between;
       width: 100%;
       gap: 10px;
-      padding: 10px 0;
-      margin-left: 15px;
+      padding: 10px 0 0 40px;
     }
 
     nav ul::before {

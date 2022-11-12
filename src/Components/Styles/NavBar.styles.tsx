@@ -7,7 +7,7 @@ export let activeStyle = {
 };
 
 export const StyledNavBar = styled.nav`
-  margin: 15px 20px 5px;
+  margin-top: 15px;
   text-align: center;
 
   ul {
