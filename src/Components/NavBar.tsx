@@ -1,21 +1,48 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
 
 export const NavBar = () => {
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+
+  //   let activeClassName = "underline";
+
   return (
     <StyledNavBar>
       <ul>
         <li>
-          <a href="">Drużyna</a>
+          <NavLink
+            to="/party"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Drużyna
+          </NavLink>
         </li>
         <li>
-          <a href="">Historia</a>
+        <NavLink
+            to="/history"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Historia
+          </NavLink>
         </li>
         <li>
-          <a href="">Mieszkańcy Barsawii</a>
+        <NavLink
+            to="/npc"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Mieszkańcy Barsawii
+          </NavLink>
         </li>
         <li>
-          <a href="">Kwiatki</a>
+        <NavLink
+            to="/quotes"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Kwiatki
+          </NavLink>
         </li>
       </ul>
     </StyledNavBar>
