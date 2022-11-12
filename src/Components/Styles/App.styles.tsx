@@ -27,10 +27,18 @@ export const StyledContainer = styled.div`
   footer {
     grid-area: f;
   }
+  nav {
+    grid-area: n;
+  }
+  section {
+    grid-area: s;
+  }
 
   main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas: "n s";
+    column-gap: 20px;
     width: 100%;
     margin: 0 auto;
     background: url(${scrollSideR}), url(${scrollSideL});

@@ -17,24 +17,24 @@ import {
 
 function App() {
   return (
-      <StyledContainer>
-        <StyledHeader />
-        <main>
+    <StyledContainer>
+      <StyledHeader />
+      <main>
         <NavBar />
         <section>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/signin" element={<SignIn />}></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
-          <Route path="/party" element={<Party />}></Route>
-          <Route path="/history" element={<History />}></Route>
-          <Route path="/npc" element={<NPC />}></Route>
-          <Route path="/quotes" element={<Quotes />}></Route>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/signin" element={<SignIn />}></Route>
+            <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/party" element={<Party />}></Route>
+            <Route path="/history" element={<History />}></Route>
+            <Route path="/npc" element={<NPC />}></Route>
+            <Route path="/quotes" element={<Quotes />}></Route>
+          </Routes>
         </section>
-        </main>
-        <StyledFooter />
-      </StyledContainer>
+      </main>
+      <StyledFooter />
+    </StyledContainer>
   );
 }
 
