@@ -36,9 +36,8 @@ export const StyledContainer = styled.div`
 
   main {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-template-areas: "n s";
-    column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "n" "s";
     width: 100%;
     margin: 0 auto;
     background: url(${scrollSideR}), url(${scrollSideL});
@@ -78,7 +77,9 @@ export const StyledContainer = styled.div`
     }
 
     main {
-      flex-direction: row;
+      grid-template-columns: 120px 1fr;
+      grid-template-areas: "n s";
+      column-gap: 20px;
       padding-right: 30px;
       padding-bottom: 50px;
     }
