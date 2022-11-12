@@ -13,16 +13,12 @@ import {
   StyledContainer,
   StyledHeader,
   StyledFooter,
-  StyledBorderRight,
-  StyledBorderLeft,
 } from "./Components/Styles/App.styles";
 
 function App() {
   return (
       <StyledContainer>
         <StyledHeader />
-        <StyledBorderRight />
-        <StyledBorderLeft />
         <main>
         <NavBar />
         <section>

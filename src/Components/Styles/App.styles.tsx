@@ -38,12 +38,12 @@ export const StyledContainer = styled.div`
     background-position: right, left;
     background-repeat: repeat-y, repeat-y;
     /* max-height: 0px; */
-    overflow: hidden;
-    animation: open 20s ease 1 forwards;
+    /* overflow: hidden; */
+    /* animation: open 20s ease 1 forwards;
     animation-delay: 0.4s;
     -webkit-transition: max-height 0.7s;
     -moz-transition: max-height 0.7s;
-    transition: max-height 0.7s;
+    transition: max-height 0.7s; */
   }
 
   section {
@@ -107,8 +107,6 @@ export const StyledContainer = styled.div`
       margin-top: 25px;
     }
   }
-
-
 `;
 
 export const StyledHeader = styled.header`
@@ -138,7 +136,3 @@ export const StyledFooter = styled.footer`
   -moz-box-shadow: 10px 20px 5px 0px #00000088;
   box-shadow: 10px 20px 5px 0px #00000088;
 `;
-
-export const StyledBorderRight = styled.div``;
-
-export const StyledBorderLeft = styled.div``;
