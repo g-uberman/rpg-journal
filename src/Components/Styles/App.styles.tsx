@@ -31,7 +31,7 @@ export const StyledContainer = styled.div`
     width: 100%;
     min-height: calc(80vh - 20px);
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 10px 45px 0;
     background: url(${scrollSideR}), url(${scrollSideL});
     background-size: fill, fill;
     background-position: right, left;
@@ -40,7 +40,7 @@ export const StyledContainer = styled.div`
 
   section {
     min-height: 100px;
-    padding: 0 40px 50px 40px;
+    padding-bottom: 50px;
   }
 
   summary {
@@ -71,13 +71,10 @@ export const StyledContainer = styled.div`
     }
 
     main {
-      grid-template-columns: 160px 1fr;
-      grid-template-rows: 2em 1fr 1.2em;
+      grid-template-columns: 120px 1fr;
+      grid-template-rows: 2em 1fr 1.1em;
       grid-template-areas: "p p" "n s" "c c";
-    }
-
-    nav {
-      padding-left: 40px;
+      column-gap: 20px;
     }
     
     nav ul {
@@ -99,10 +96,6 @@ export const StyledContainer = styled.div`
       content: "†";
       font-size: 1.5em;
       transform: none;
-    }
-
-    section {
-      padding-left: 25px;
     }
   }
 `;
