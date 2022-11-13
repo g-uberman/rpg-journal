@@ -7,7 +7,6 @@ export let activeStyle = {
 };
 
 export const StyledNavBar = styled.nav`
-  margin-top: 15px;
   text-align: center;
 
   ul {
@@ -19,7 +18,6 @@ export const StyledNavBar = styled.nav`
     flex-wrap: wrap;
     align-items: center;
     column-gap: 25px;
-    margin-bottom: 10px;
   }
 
   ul::before {

@@ -9,7 +9,7 @@ import { History } from "./Components/History";
 import { NPC } from "./Components/NPC";
 import { Quotes } from "./Components/Quotes";
 import { Credits } from "./Components/Credits";
-
+import { PartyHeader } from "./Components/PartyHeader";
 import {
   StyledContainer,
   StyledHeader,
@@ -21,6 +21,7 @@ function App() {
     <StyledContainer>
       <StyledHeader />
       <main>
+        <PartyHeader />
         <NavBar />
         <section>
           <Routes>

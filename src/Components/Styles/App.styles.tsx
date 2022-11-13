@@ -9,41 +9,29 @@ import scrollShadow from "../../img/header-shadow.png";
 export const StyledContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "h"
-    "m"
-    "f";
+  grid-template-areas: "h" "m" "f";
   max-width: 720px;
   margin: 0 auto;
   margin-top: 7px;
   margin-bottom: 7px;
 
-  header {
-    grid-area: h;
-  }
-  main {
-    grid-area: m;
-  }
-  footer {
-    grid-area: f;
-  }
-  nav {
-    grid-area: n;
-  }
-  section {
-    grid-area: s;
-  }
-  summary {
-    grid-area: c;
-  }
+  header {grid-area: h;}
+  main {grid-area: m;}
+  footer {grid-area: f;}
+  nav {grid-area: n;}
+  section {grid-area: s;}
+  summary {grid-area: c;}
+  #partyHeader {grid-area: p;}
 
   main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "n" "s" "c";
+    grid-template-areas: "p" "n" "s" "c";
+    row-gap: 10px;
     width: 100%;
     min-height: calc(80vh - 20px);
     margin: 0 auto;
+    padding-top: 10px;
     background: url(${scrollSideR}), url(${scrollSideL});
     background-size: fill, fill;
     background-position: right, left;
@@ -84,8 +72,8 @@ export const StyledContainer = styled.div`
 
     main {
       grid-template-columns: 160px 1fr;
-      grid-template-rows: 1fr 1.2em;
-      grid-template-areas: "n s" "c c";
+      grid-template-rows: 2em 1fr 1.2em;
+      grid-template-areas: "p p" "n s" "c c";
     }
 
     nav ul {
@@ -93,7 +81,7 @@ export const StyledContainer = styled.div`
       justify-content: space-between;
       width: 100%;
       gap: 10px;
-      padding: 10px 0 0 40px;
+      padding-left: 40px;
     }
 
     nav ul::before {
@@ -111,12 +99,7 @@ export const StyledContainer = styled.div`
     }
 
     section {
-      margin-top: 25px;
       padding-left: 25px;
-    }
-
-    nav {
-      margin-top: 25px;
     }
   }
 `;

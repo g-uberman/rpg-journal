@@ -24,6 +24,12 @@ nav {
     text-align: center;
 }
 
+#partyHeader {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Metamorphous', cursive;
+}
+
 p {
     margin-bottom: 1em;
 }
@@ -44,11 +50,15 @@ a, a:visited {
     color: #5d534d
 }
 
-h1, h2, h3 {
-    margin-bottom: 10px;
+h1 {
+    font-size: 1.5em;
 }
 
-h4 {
+/* h1, h2, h3 {
+    margin-bottom: 10px;
+} */
+
+/* h4 {
     margin-bottom: 5px;
-}
+} */
 `
