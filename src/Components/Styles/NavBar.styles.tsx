@@ -38,33 +38,30 @@ export const StyledNavBar = styled.nav`
     right: 50px;
   }
 
-  a,
-  a:visited {
+  a {
     font-weight: bold;
-    transition: text-shadow 1s;
-  }
-
-  a:hover {
-    text-shadow: 0px 0px 5px #be2a0430;
-    color: #5d534d90;
-    transition: text-shadow 0.5s;
+    color: #5d534d;
     background-image: url(${lava});
     background-size: cover;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     animation: animateLava 90s infinite;
+    text-shadow: none;
+    transition: text-shadow 1.5s ease-in-out;
+    transition: color 1.5s ease-in-out;
+    position: relative;
+    z-index: 2;
+  }
+
+  a:hover {
+    text-shadow: 0px 0px 5px #be2a0420;
+    color: #5d534d80;
   }
 
   a.selectedNav {
     text-shadow: 0px 0px 5px #ffc32580;
     color: #00000000;
-    background-image: url(${lava});
-    background-size: cover;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    animation: animateLava 90s infinite;
   }
 
   @keyframes animateLava {
