@@ -5,6 +5,7 @@ export const StyledPartyHeader = styled.div`
   cursor: pointer;
   margin: 0 auto;
   position: relative;
+  font-size: 1.5em;
 
   /* h1::before {
     content: "†";

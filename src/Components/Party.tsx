@@ -3,6 +3,7 @@ import React from "react";
 export const Party = () => {
   return (
     <>
+      <h1>Drużyna</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
         culpa sequi assumenda cumque cum accusamus dolore. Corrupti deleniti,

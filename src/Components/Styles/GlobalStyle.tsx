@@ -34,7 +34,7 @@ p {
     margin-bottom: 1em;
 }
 
-p:first-child:first-letter {
+p:first-of-type:first-letter {
     float: left;
     font-size: 2.5em;
     font-weight: bold;
@@ -52,13 +52,6 @@ a, a:visited {
 
 h1 {
     font-size: 1.5em;
+    margin-bottom: 0.5rem;
 }
-
-/* h1, h2, h3 {
-    margin-bottom: 10px;
-} */
-
-/* h4 {
-    margin-bottom: 5px;
-} */
 `

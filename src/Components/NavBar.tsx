@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
 
 export const NavBar = () => {
-  let activeClassName ="selectedNav";
+  let activeClassName = "selectedNav";
 
   return (
     <StyledNavBar>
