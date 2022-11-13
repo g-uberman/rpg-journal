@@ -19,7 +19,7 @@ body {
     font-family: 'Gideon Roman', cursive;
 }
 
-nav {
+nav ul {
     font-family: 'Metamorphous', cursive;
     text-align: center;
 }
@@ -51,7 +51,8 @@ a, a:visited {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-family: 'Metamorphous', cursive;
+    font-size: 1.2em;
     margin-bottom: 0.5rem;
 }
 `

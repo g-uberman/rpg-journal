@@ -76,12 +76,15 @@ export const StyledContainer = styled.div`
       grid-template-areas: "p p" "n s" "c c";
     }
 
+    nav {
+      padding-left: 40px;
+    }
+    
     nav ul {
-      flex-direction: column;
-      justify-content: space-between;
       width: 100%;
       gap: 10px;
-      padding-left: 40px;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     nav ul::before {
