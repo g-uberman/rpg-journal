@@ -15,8 +15,8 @@ export const StyledContainer = styled.div`
     "f";
   max-width: 720px;
   margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 
   header {
     grid-area: h;
@@ -52,13 +52,18 @@ export const StyledContainer = styled.div`
 
   section {
     min-height: 100px;
-    padding: 0 25px 50px 25px;
-    margin: 5px 20px;
+    padding: 0 40px 50px 40px;
   }
 
   summary {
     max-height: 1em;
   }
+
+  header,
+    footer {
+      width: calc(100vw - 14px);
+      margin: 0 auto;
+    }
 
   @media screen and (min-width: 475px) {
     main {
@@ -73,15 +78,14 @@ export const StyledContainer = styled.div`
     header,
     footer {
       height: 70px;
-      border: 1px solid #5d534d;
-      border-top: 1px solid #f3e4d7;
+      width: initial;
+      margin: initial;
     }
 
     main {
       grid-template-columns: 160px 1fr;
+      grid-template-rows: 1fr 1.2em;
       grid-template-areas: "n s" "c c";
-      padding-right: 30px;
-      padding-bottom: 50px;
     }
 
     nav ul {
@@ -108,7 +112,7 @@ export const StyledContainer = styled.div`
 
     section {
       margin-top: 25px;
-      margin-left: 0;
+      padding-left: 25px;
     }
 
     nav {
