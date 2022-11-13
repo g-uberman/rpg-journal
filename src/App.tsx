@@ -8,6 +8,7 @@ import { Party } from "./Components/Party";
 import { History } from "./Components/History";
 import { NPC } from "./Components/NPC";
 import { Quotes } from "./Components/Quotes";
+import { Credits } from "./Components/Credits";
 
 import {
   StyledContainer,
@@ -32,6 +33,7 @@ function App() {
             <Route path="/quotes" element={<Quotes />}></Route>
           </Routes>
         </section>
+        <Credits />
       </main>
       <StyledFooter />
     </StyledContainer>

@@ -33,11 +33,14 @@ export const StyledContainer = styled.div`
   section {
     grid-area: s;
   }
+  summary {
+    grid-area: c;
+  }
 
   main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "n" "s";
+    grid-template-areas: "n" "s" "c";
     width: 100%;
     min-height: calc(80vh - 20px);
     margin: 0 auto;
@@ -51,6 +54,10 @@ export const StyledContainer = styled.div`
     min-height: 100px;
     padding: 0 25px 50px 25px;
     margin: 5px 20px;
+  }
+
+  summary {
+    max-height: 1em;
   }
 
   @media screen and (min-width: 475px) {
@@ -72,7 +79,7 @@ export const StyledContainer = styled.div`
 
     main {
       grid-template-columns: 160px 1fr;
-      grid-template-areas: "n s";
+      grid-template-areas: "n s" "c c";
       padding-right: 30px;
       padding-bottom: 50px;
     }
