@@ -1,10 +1,11 @@
 import React from "react";
 import { StyledPartyHeader } from "./Styles/PartyHeader.styles";
+import { Link } from "react-router-dom";
 
 export const PartyHeader = () => {
   return (
     <StyledPartyHeader id="partyHeader">
-      <span>Wataha</span>
+      <Link to="/">Wataha</Link>
     </StyledPartyHeader>
   );
 };

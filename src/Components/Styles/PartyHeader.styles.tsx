@@ -4,7 +4,6 @@ export const StyledPartyHeader = styled.div`
   text-align: center;
   cursor: pointer;
   margin: 0 auto;
-  position: relative;
   font-size: 1.5em;
 
   /* h1::before {
