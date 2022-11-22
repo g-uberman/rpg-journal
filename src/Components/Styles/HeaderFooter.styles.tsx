@@ -16,16 +16,21 @@ export const StyledHeader = styled.header`
   -moz-box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
   box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
 
-  #headerLink:hover {
-    cursor: default;
-  }
-
-  .selectedHeader::after {
-    content: "";
+  #headerLink {
     display: inline-block;
     width: 100%;
     height: 100%;
     background: radial-gradient(ellipse at bottom, #ff992550, transparent 35%);
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+
+  #headerLink.glowingHeader {
+    opacity: 1;
+  }
+
+  #headerLink:hover {
+    cursor: default;
   }
 `;
 

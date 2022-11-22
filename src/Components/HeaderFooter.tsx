@@ -3,7 +3,7 @@ import { StyledFooter } from "./Styles/HeaderFooter.styles";
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-  let activeClassName = "selectedHeader";
+  let activeClassName = "glowingHeader";
 
   return (
     <StyledHeader>
