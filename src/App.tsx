@@ -12,6 +12,8 @@ import { Credits } from "./Components/Credits";
 import { Members } from "./Components/Members";
 import { Header } from "./Components/HeaderFooter";
 import { Footer } from "./Components/HeaderFooter";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./Components/Styles/Theme";
 import {
   StyledContainer,
   // StyledFooter,
@@ -19,6 +21,7 @@ import {
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <StyledContainer>
       <Header />
       <main>
@@ -40,6 +43,7 @@ function App() {
       </main>
       <Footer />
     </StyledContainer>
+    </ThemeProvider>
   );
 }
 
