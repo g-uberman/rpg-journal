@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
     url(${scrollHeader});
   background-size: cover, cover, cover;
   background-position-y: top, bottom, center;
-  z-index: 1;
+  z-index: 3;
   -webkit-box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
   -moz-box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
   box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
@@ -20,7 +20,7 @@ export const StyledHeader = styled.header`
     display: inline-block;
     width: 100%;
     height: 100%;
-    background: radial-gradient(ellipse at bottom, #ff992550, transparent 35%);
+    background: radial-gradient(ellipse at bottom, #ff922550, transparent 35%);
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
   }
