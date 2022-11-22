@@ -11,6 +11,7 @@ export const SignIn = () => {
           helperText=" "
           variant="standard"
           placeholder="adres email"
+          sx={{ marginTop: "1em" }}
         />
         <TextField
           helperText=" "
@@ -18,8 +19,10 @@ export const SignIn = () => {
           placeholder="hasło"
         />
         <Button
-        variant="outlined"
-        size="small">
+        variant="contained"
+        size="small"
+        sx={{ maxWidth: "10em", borderRadius: "0", outline: "1px solid #5d534d", border: "1px solid white" }}
+        >    
         Zaloguj się
         </Button>
       </FormControl>
