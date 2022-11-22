@@ -9,6 +9,7 @@ import { History } from "./Components/History";
 import { NPC } from "./Components/NPC";
 import { Quotes } from "./Components/Quotes";
 import { Credits } from "./Components/Credits";
+import { Members } from "./Components/Members";
 import { PartyHeader } from "./Components/PartyHeader";
 import {
   StyledContainer,
@@ -28,7 +29,7 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/signin" element={<SignIn />}></Route>
             <Route path="/signup" element={<SignUp />}></Route>
-            <Route path="/party" element={<Party />}></Route>
+            <Route path="/members" element={<Members />}></Route>
             <Route path="/history" element={<History />}></Route>
             <Route path="/npc" element={<NPC />}></Route>
             <Route path="/quotes" element={<Quotes />}></Route>
