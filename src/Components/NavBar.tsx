@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
+import { StyledHeader } from "./Styles/App.styles";
 
 export const PartyHeader = () => {
   let activeClassName = "selectedNav";
@@ -15,6 +16,20 @@ export const PartyHeader = () => {
         Wataha
       </NavLink>
     </StyledNavBar>
+  );
+};
+
+export const Header = () => {
+  let activeClassName = "selectedHeader";
+
+  return (
+    <StyledHeader>
+      <NavLink id="navHeader"
+        to="/party"
+        className={({ isActive }) => (isActive ? activeClassName : undefined)}
+      ></NavLink>
+      ;
+    </StyledHeader>
   );
 };
 

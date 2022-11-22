@@ -10,6 +10,7 @@ import { NPC } from "./Components/NPC";
 import { Quotes } from "./Components/Quotes";
 import { Credits } from "./Components/Credits";
 import { Members } from "./Components/Members";
+import { Header } from "./Components/NavBar";
 import {
   StyledContainer,
   StyledHeader,
@@ -19,7 +20,7 @@ import {
 function App() {
   return (
     <StyledContainer>
-      <StyledHeader />
+      <Header />
       <main>
         <PartyHeader />
         <NavBar />
