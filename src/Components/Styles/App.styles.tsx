@@ -115,16 +115,16 @@ export const StyledHeader = styled.header`
   -moz-box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
   box-shadow: 10px 20px 5px 0px #00000033, 10px 5px 15px 0px #00000088;
 
-  .selectedHeader::after {
-      content: "";
-      display: inline-block;
-      width: 720px;
-      height: 68px;
-      background: radial-gradient(ellipse at bottom, #ff992550, transparent 35%);
-    }
-
-    #navHeader:hover {
+  #navHeader:hover {
     cursor: default;
+  }
+
+  .selectedHeader::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #ff992550, transparent 35%);
   }
 `;
 
