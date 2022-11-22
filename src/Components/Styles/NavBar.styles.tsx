@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import lava from "../../img/lava.jpg";
 
-export let activeStyle = {
-  textShadow: "2px 2px 4px #000000",
-  backgroundImage: `url(${lava})`,
-};
-
 export const StyledNavBar = styled.nav`
   text-align: center;
+
+  #partyName {
+  /* text-align: center;
+  cursor: pointer;
+  margin: 0 auto; */
+  font-size: 1.5em;
+  /* font-size: 5em; */
+  }
 
   ul {
     list-style: none;
@@ -69,7 +72,7 @@ export const StyledNavBar = styled.nav`
     }
     to {
       background-position-x: 800px;
-      background-position-y: 800px;
+      background-position-y: -800px;
     }
   }
 `;

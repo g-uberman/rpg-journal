@@ -2,6 +2,22 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
 
+export const PartyHeader = () => {
+  let activeClassName = "selectedNav";
+
+  return (
+    <StyledNavBar id="partyHeader">
+      <NavLink
+        id="partyName"
+        to="/party"
+        className={({ isActive }) => (isActive ? activeClassName : undefined)}
+      >
+        Wataha
+      </NavLink>
+    </StyledNavBar>
+  );
+};
+
 export const NavBar = () => {
   let activeClassName = "selectedNav";
 
@@ -10,12 +26,12 @@ export const NavBar = () => {
       <ul>
         <li>
           <NavLink
-            to="/party"
+            to="/members"
             className={({ isActive }) =>
               isActive ? activeClassName : undefined
             }
           >
-            Drużyna
+            Drużynnicy
           </NavLink>
         </li>
         <li>

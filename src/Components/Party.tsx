@@ -5,7 +5,7 @@ export const Party = () => {
     <>
       <h1>Drużyna</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+        Amet consectetur, adipisicing elit. Molestiae
         culpa sequi assumenda cumque cum accusamus dolore. Corrupti deleniti,
         iure facere molestiae expedita ratione laudantium minima saepe assumenda
         id illum excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing
