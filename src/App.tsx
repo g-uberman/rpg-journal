@@ -10,11 +10,11 @@ import { NPC } from "./Components/NPC";
 import { Quotes } from "./Components/Quotes";
 import { Credits } from "./Components/Credits";
 import { Members } from "./Components/Members";
-import { Header } from "./Components/NavBar";
+import { Header } from "./Components/HeaderFooter";
+import { Footer } from "./Components/HeaderFooter";
 import {
   StyledContainer,
-  StyledHeader,
-  StyledFooter,
+  // StyledFooter,
 } from "./Components/Styles/App.styles";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         </section>
         <Credits />
       </main>
-      <StyledFooter />
+      <Footer />
     </StyledContainer>
   );
 }
