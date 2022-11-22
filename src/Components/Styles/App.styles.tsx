@@ -29,7 +29,7 @@ export const StyledContainer = styled.div`
     grid-template-areas: "p" "n" "s" "c";
     row-gap: 10px;
     width: 100%;
-    min-height: calc(80vh - 20px);
+    min-height: calc(80vh - 14px);
     margin: 0 auto;
     padding: 10px 45px 0;
     background: url(${scrollSideR}), url(${scrollSideL});
@@ -75,6 +75,7 @@ export const StyledContainer = styled.div`
       grid-template-rows: 2em 1fr 1.1em;
       grid-template-areas: "p p" "n s" "c c";
       column-gap: 20px;
+      min-height: calc(100vh - 154px);
     }
     
     nav ul {
