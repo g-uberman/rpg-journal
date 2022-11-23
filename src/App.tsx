@@ -14,35 +14,32 @@ import { Header } from "./Components/HeaderFooter";
 import { Footer } from "./Components/HeaderFooter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./Components/Styles/Theme";
-import {
-  StyledContainer,
-  // StyledFooter,
-} from "./Components/Styles/App.styles";
+import { StyledContainer } from "./Components/Styles/App.styles";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-    <StyledContainer>
-      <Header />
-      <main>
-        <PartyHeader />
-        <NavBar />
-        <section>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/signin" element={<SignIn />}></Route>
-            <Route path="/signup" element={<SignUp />}></Route>
-            <Route path="/party" element={<Party />}></Route>
-            <Route path="/members" element={<Members />}></Route>
-            <Route path="/history" element={<History />}></Route>
-            <Route path="/npc" element={<NPC />}></Route>
-            <Route path="/quotes" element={<Quotes />}></Route>
-          </Routes>
-        </section>
-        <Credits />
-      </main>
-      <Footer />
-    </StyledContainer>
+      <StyledContainer>
+        <Header />
+        <main>
+          <PartyHeader />
+          <NavBar />
+          <section>
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/signin" element={<SignIn />}></Route>
+              <Route path="/signup" element={<SignUp />}></Route>
+              <Route path="/party" element={<Party />}></Route>
+              <Route path="/members" element={<Members />}></Route>
+              <Route path="/history" element={<History />}></Route>
+              <Route path="/npc" element={<NPC />}></Route>
+              <Route path="/quotes" element={<Quotes />}></Route>
+            </Routes>
+          </section>
+          <Credits />
+        </main>
+        <Footer />
+      </StyledContainer>
     </ThemeProvider>
   );
 }

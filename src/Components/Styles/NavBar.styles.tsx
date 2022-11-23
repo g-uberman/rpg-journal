@@ -7,8 +7,8 @@ export const StyledNavBar = styled.nav`
   #partyName {
     font-size: 1.5em;
     text-shadow: 0px 0px 5px #be2a0400, 0px -20px 30px #be2a0400;
-    transition: text-shadow 1.5s ease-in-out;
-    transition: color 1.5s ease-in-out;
+    transition: text-shadow 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
   }
 
   ul {
@@ -48,14 +48,14 @@ export const StyledNavBar = styled.nav`
     background-clip: text;
     animation: animateLava 90s infinite;
     text-shadow: 0px 0px 5px #be2a0400;
-    transition: text-shadow 1.5s ease-in-out;
-    transition: color 1.5s ease-in-out;
+    transition: text-shadow 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     position: relative;
     z-index: 2;
   }
 
   a:hover {
-    text-shadow: 0px 0px 5px #be2a0420;
+    /* text-shadow: 0px 0px 5px #be2a0420; */
     color: #5d534d80;
   }
 
@@ -66,7 +66,7 @@ export const StyledNavBar = styled.nav`
   }
   
   #partyName:hover {
-    text-shadow: 0px 0px 5px #be2a0420, 0px -20px 30px #be2a0450;
+    /* text-shadow: 0px 0px 5px #be2a0420, 0px -20px 30px #be2a0450; */
     color: #5d534d80;
   }
 

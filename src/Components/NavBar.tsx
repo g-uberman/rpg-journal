@@ -5,6 +5,7 @@ import { StyledNavBar } from "./Styles/NavBar.styles";
 
 export const PartyHeader = () => {
   let activeClassName = "selectedNav";
+  const partyName = ""
 
   return (
     <StyledNavBar id="partyHeader">
@@ -13,7 +14,7 @@ export const PartyHeader = () => {
         to="/party"
         className={({ isActive }) => (isActive ? activeClassName : undefined)}
       >
-        Wataha
+        {partyName || "Dziennik Drużynowy"}
       </NavLink>
     </StyledNavBar>
   );
