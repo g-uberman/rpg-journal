@@ -47,7 +47,8 @@ p:first-of-type:first-letter {
 
 a, a:visited {
     text-decoration: none;
-    color: #5d534d
+    color: #5d534d;
+    font-weight: bold;
 }
 
 h1 {
