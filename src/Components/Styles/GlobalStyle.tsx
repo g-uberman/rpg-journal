@@ -11,12 +11,12 @@ export const GlobalStyle = createGlobalStyle`
 body {
     background: url(${background});
     background-size: fill;
-    color: #5d534d;
 }
 
 /* FONTS */
 body {
     font-family: 'Gideon Roman', cursive;
+    color: #5d534d;
 }
 
 nav ul {
