@@ -8,12 +8,6 @@ export const theme = createTheme({
       dark: "#5d534d",
       contrastText: "#ffffff",
     },
-    // secondary: {
-    //   light: "#ff8a50",
-    //   main: "#ff5722",
-    //   dark: "#c41c00",
-    //   contrastText: "#000000",
-    // },
   },
   typography: {
     "fontFamily": `"Gideon Roman", cursive`,

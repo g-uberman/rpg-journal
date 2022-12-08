@@ -13,7 +13,7 @@ import { Members } from "./Components/Members";
 import { Header } from "./Components/HeaderFooter";
 import { Footer } from "./Components/HeaderFooter";
 import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "./Components/Styles/Theme";
+import { theme } from "./styles/theme";
 import { StyledContainer } from "./Components/Styles/App.styles";
 
 function App() {
