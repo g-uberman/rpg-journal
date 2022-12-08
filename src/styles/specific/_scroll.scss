@@ -1,12 +1,4 @@
-import styled from "styled-components";
-import scrollSideR from "../../img/scroll-side-R.png";
-import scrollSideL from "../../img/scroll-side-L.png";
-import scrollCenter from "../../img/scroll-center.png";
-import scrollHeader from "../../img/header.jpg";
-import scrollHighlight from "../../img/header-highlight.png";
-import scrollShadow from "../../img/header-shadow.png";
-
-export const StyledContainer = styled.div`
+#scroll {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "h" "m" "f";
@@ -32,7 +24,7 @@ export const StyledContainer = styled.div`
     min-height: calc(80vh - 14px);
     margin: 0 auto;
     padding: 10px 45px 0;
-    background: url(${scrollSideR}), url(${scrollSideL});
+    background: url("./../img/scroll-side-R.png"), url("./../img/scroll-side-L.png");
     background-size: fill, fill;
     background-position: right, left;
     background-repeat: repeat-y, repeat-y;
@@ -56,7 +48,7 @@ export const StyledContainer = styled.div`
 
   @media screen and (min-width: 475px) {
     main {
-      background: url(${scrollSideR}), url(${scrollSideL}), url(${scrollCenter});
+      background: url("./../img/scroll-side-R.png"), url("./../img/scroll-side-L.png"), url("./../img/scroll-center.png");
       background-size: fill, fill, fill;
       background-position: right, left, center;
       background-repeat: repeat-y, repeat-y, repeat-y;
@@ -100,4 +92,4 @@ export const StyledContainer = styled.div`
       transform: none;
     }
   }
-`;
+};

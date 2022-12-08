@@ -14,12 +14,12 @@ import { Header } from "./Components/HeaderFooter";
 import { Footer } from "./Components/HeaderFooter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/theme";
-import { StyledContainer } from "./Components/Styles/App.styles";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StyledContainer>
+
+        <div id="scroll">
         <Header />
         <main>
           <PartyHeader />
@@ -39,7 +39,8 @@ function App() {
           <Credits />
         </main>
         <Footer />
-      </StyledContainer>
+        </div>
+
     </ThemeProvider>
   );
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Gideon Roman", cursive;
   color: #5d534d;
@@ -39,6 +40,106 @@ a, a:visited {
   text-decoration: none;
   color: #5d534d;
   font-weight: bold;
+}
+
+#scroll {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "h" "m" "f";
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+#scroll header {
+  grid-area: h;
+}
+#scroll main {
+  grid-area: m;
+}
+#scroll footer {
+  grid-area: f;
+}
+#scroll nav {
+  grid-area: n;
+}
+#scroll section {
+  grid-area: s;
+}
+#scroll summary {
+  grid-area: c;
+}
+#scroll #partyHeader {
+  grid-area: p;
+}
+#scroll main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "p" "n" "s" "c";
+  row-gap: 10px;
+  width: 100%;
+  min-height: calc(80vh - 14px);
+  margin: 0 auto;
+  padding: 10px 45px 0;
+  background: url("./../img/scroll-side-R.png"), url("./../img/scroll-side-L.png");
+  background-size: fill, fill;
+  background-position: right, left;
+  background-repeat: repeat-y, repeat-y;
+}
+#scroll section {
+  min-height: 100px;
+  padding-bottom: 50px;
+}
+#scroll summary {
+  max-height: 1em;
+}
+#scroll header,
+#scroll footer {
+  width: calc(100vw - 14px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 475px) {
+  #scroll main {
+    background: url("./../img/scroll-side-R.png"), url("./../img/scroll-side-L.png"), url("./../img/scroll-center.png");
+    background-size: fill, fill, fill;
+    background-position: right, left, center;
+    background-repeat: repeat-y, repeat-y, repeat-y;
+  }
+}
+@media screen and (min-width: 700px) {
+  #scroll header,
+#scroll footer {
+    height: 70px;
+    width: initial;
+    margin: initial;
+  }
+  #scroll main {
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 2em 1fr 1.1em;
+    grid-template-areas: "p p" "n s" "c c";
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    min-height: calc(100vh - 154px);
+  }
+  #scroll nav ul {
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #scroll nav ul::before {
+    position: initial;
+    content: "†";
+    transform: rotate(180deg);
+    font-size: 1.5em;
+  }
+  #scroll nav ul::after {
+    position: initial;
+    content: "†";
+    font-size: 1.5em;
+    transform: none;
+  }
 }
 
 * {
