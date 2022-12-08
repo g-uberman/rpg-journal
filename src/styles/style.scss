@@ -1,0 +1,13 @@
+@import './shared/colors';
+@import './shared/fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../img/wood.jpg");
+    background-size: fill;
+}
