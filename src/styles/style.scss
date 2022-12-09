@@ -1,15 +1,17 @@
-@import './shared/colors';
-@import './shared/fonts';
+@import "./shared/colors";
+@import "./shared/fonts";
+@import "./shared/mixins";
+@import "./shared/inputs";
 
-@import './specific/scroll';
+@import "./specific/scroll";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: url("../img/wood.jpg");
-    background-size: fill;
+  background: url("../img/wood.jpg");
+  background-size: fill;
 }

@@ -14,12 +14,14 @@ export const SignIn = () => {
       <h1>Zaloguj się</h1>
       <FormControl>
         <TextField
+          InputProps={{ className: "login" }}
           helperText=" "
           variant="standard"
           placeholder="adres email"
           sx={{ marginTop: "1em" }}
         />
         <TextField
+          InputProps={{ className: "login" }}
           helperText=" "
           variant="standard"
           placeholder="hasło"
@@ -41,11 +43,8 @@ export const SignIn = () => {
           Zaloguj się
         </Button>
         <div style={{ height: "63.5px", paddingTop: "2.3em" }}>
-            Nie masz jeszcze konta? Przejdź do {" "}
-            <Link
-            to={{pathname:"/signup"}}>
-            rejestracji.
-            </Link>
+          Nie masz jeszcze konta? Przejdź do{" "}
+          <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
         </div>
       </FormControl>
     </StyledLoginContainer>

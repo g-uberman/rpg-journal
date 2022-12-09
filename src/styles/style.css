@@ -42,6 +42,24 @@ a, a:visited {
   font-weight: bold;
 }
 
+.login {
+  background: #fcf8f4;
+}
+.login input:-webkit-autofill,
+.login input:-webkit-autofill:hover,
+.login input:-webkit-autofill:focus,
+.login input:-webkit-autofill::first-line,
+.login textarea:-webkit-autofill,
+.login textarea:-webkit-autofill:hover,
+.login textarea:-webkit-autofill:focus,
+.login select:-webkit-autofill,
+.login select:-webkit-autofill:hover,
+.login select:-webkit-autofill:focus {
+  background: #fcf8f4;
+  -webkit-text-fill-color: #5d534d;
+  -webkit-box-shadow: 0 0 0px 1000px #fcf8f4 inset;
+}
+
 #scroll {
   display: grid;
   grid-template-columns: 1fr;
