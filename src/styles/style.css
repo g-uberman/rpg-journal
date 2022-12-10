@@ -84,7 +84,7 @@ a, a:visited {
 #scroll section {
   grid-area: s;
 }
-#scroll summary {
+#scroll #credits {
   grid-area: c;
 }
 #scroll #partyHeader {
@@ -108,7 +108,7 @@ a, a:visited {
   min-height: 100px;
   padding-bottom: 50px;
 }
-#scroll summary {
+#scroll #credits {
   max-height: 1em;
 }
 #scroll header,
@@ -158,6 +158,12 @@ a, a:visited {
     font-size: 1.5em;
     transform: none;
   }
+}
+
+#credits {
+  text-align: center;
+  font-size: 0.8em;
+  margin-bottom: 0.3em;
 }
 
 * {

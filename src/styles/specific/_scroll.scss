@@ -12,7 +12,7 @@
   footer {grid-area: f;}
   nav {grid-area: n;}
   section {grid-area: s;}
-  summary {grid-area: c;}
+  #credits {grid-area: c;}
   #partyHeader {grid-area: p;}
 
   main {
@@ -35,7 +35,7 @@
     padding-bottom: 50px;
   }
 
-  summary {
+  #credits {
     max-height: 1em;
   }
 
