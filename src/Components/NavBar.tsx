@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { StyledNavBar } from "./Styles/NavBar.styles";
-// import { StyledHeader } from "./Styles/App.styles";
+import { Context } from "../ContextProvider";
+
 
 export const PartyHeader = () => {
+  const { userEmail, setEmail, party, setParty } = useContext(Context);
+
   let activeClassName = "selectedNav";
   const partyName = ""
 

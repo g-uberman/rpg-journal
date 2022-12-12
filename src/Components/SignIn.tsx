@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "./../ContextProvider";
+import { useNavigate } from "react-router-dom";
 import { StyledLoginContainer } from "./Styles/Login.styles";
 import { FormControl, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export const SignIn = () => {
+  const { userEmail, setEmail, party, setParty } = useContext(Context);
+
   return (
     <StyledLoginContainer>
       <p style={{ marginBottom: "3em" }}>

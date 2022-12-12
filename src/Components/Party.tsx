@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "./../ContextProvider";
 
 export const Party = () => {
+  const { userEmail, party, setParty } = useContext(Context);
+
   return (
     <>
       <h1>Drużyna</h1>
+      {userEmail && (
+        <div>
+          <h4>Zalogowano jako {userEmail}</h4>
+          <br />
+        </div>
+      )}
       <p>
-        Amet consectetur, adipisicing elit. Molestiae
-        culpa sequi assumenda cumque cum accusamus dolore. Corrupti deleniti,
-        iure facere molestiae expedita ratione laudantium minima saepe assumenda
-        id illum excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing
-        elit. Obcaecati nulla aliquid mollitia corrupti et. Esse dolorum
-        asperiores quam sint velit praesentium architecto, culpa quo voluptas
-        maiores nisi magnam ullam explicabo. Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Atque nihil enim ducimus quas neque.
-        Mollitia, possimus? Nam atque, maxime amet dolores repudiandae
-        voluptates, voluptatum consequuntur impedit eligendi laborum adipisci
-        animi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Amet consectetur, adipisicing elit. Molestiae culpa sequi assumenda
+        cumque cum accusamus dolore. Corrupti deleniti, iure facere molestiae
+        expedita ratione laudantium minima saepe assumenda id illum excepturi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        nulla aliquid mollitia corrupti et. Esse dolorum asperiores quam sint
+        velit praesentium architecto, culpa quo voluptas maiores nisi magnam
+        ullam explicabo. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Atque nihil enim ducimus quas neque. Mollitia, possimus? Nam
+        atque, maxime amet dolores repudiandae voluptates, voluptatum
+        consequuntur impedit eligendi laborum adipisci animi. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit.
       </p>
       <p>
         Ea, quis quas architecto eos quaerat velit pariatur, alias, eius ipsam

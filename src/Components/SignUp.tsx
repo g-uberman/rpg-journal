@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
 import { StyledLoginContainer } from "./Styles/Login.styles";
 import { FormControl, TextField, Button } from "@mui/material";
@@ -19,6 +20,8 @@ const noErrors: ErrorProps = {
 };
 
 export const SignUp = () => {
+  const { userEmail, setEmail, party, setParty } = useContext(Context);
+
   const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -57,7 +60,7 @@ export const SignUp = () => {
         registerEmail,
         registerPassword
       );
-      // setUsername(registerEmail);
+      setEmail(registerEmail);
       navigate("/party");
     } catch ({ code, message }) {
       handleFirebaseError(code);
