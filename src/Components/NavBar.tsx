@@ -14,7 +14,7 @@ export const PartyHeader = () => {
     <StyledNavBar id="partyHeader">
       <NavLink
         id="partyName"
-        to="/party"
+        to="/settings"
         className={({ isActive }) => (isActive ? activeClassName : undefined)}
       >
         {partyName || "Dziennik Drużynowy"}

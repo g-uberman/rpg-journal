@@ -61,7 +61,7 @@ export const SignUp = () => {
         registerPassword
       );
       setEmail(registerEmail);
-      navigate("/party");
+      navigate("/settings");
     } catch ({ code, message }) {
       handleFirebaseError(code);
     }
