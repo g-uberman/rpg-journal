@@ -134,7 +134,7 @@ export const SignUp = () => {
           }}
           onClick={onRegister}
         >
-          Zaloguj się
+          Zarejestruj się
         </Button>
         <div style={{ height: "63.5px", paddingTop: "2.3em" }}>
           Masz już konto? Przejdź do{" "}
