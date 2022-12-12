@@ -9,6 +9,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { firebaseConfig } from "./firebase";
+import { ContextProvider } from "./ContextProvider";
 
 const firebaseApp = initializeApp(firebaseConfig);
 export const firebaseAuth = getAuth(firebaseApp);
@@ -20,7 +21,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <ContextProvider>
+        <App />
+      </ContextProvider>
     </Router>
   </React.StrictMode>
 );
