@@ -58,7 +58,7 @@ export const SignUp = () => {
         registerPassword
       );
       // setUsername(registerEmail);
-      navigate("/signin");
+      navigate("/party");
     } catch ({ code, message }) {
       handleFirebaseError(code);
     }
@@ -94,6 +94,7 @@ export const SignUp = () => {
       <h1>Zarejestruj się</h1>
       <FormControl>
         <TextField
+          InputProps={{ className: "login" }}
           {...emailError}
           // {...emailLabels}
           onChange={(event) => setRegisterEmail(event.target.value)}
@@ -103,6 +104,7 @@ export const SignUp = () => {
           sx={{ marginTop: "1em" }}
         />
         <TextField
+          InputProps={{ className: "login" }}
           {...passwordError}
           // {...passwordLabels}
           onChange={(event) => setRegisterPassword(event.target.value)}
@@ -112,6 +114,7 @@ export const SignUp = () => {
           type="password"
         />
         <TextField
+          InputProps={{ className: "login" }}
           {...passwordError}
           // {...password2Labels}
           onChange={(event) => setRepeatedPassword(event.target.value)}
