@@ -17,8 +17,7 @@ export const Settings = () => {
 
   return (
     <>
-      <h1>Ustawienia</h1>
-      <h3>Ustawienia użytkownika</h3>
+      <h1>Ustawienia użytkownika</h1>
       {userEmail && (
         <div>
           <h4>Zalogowano jako {userEmail}</h4>
@@ -38,7 +37,7 @@ export const Settings = () => {
         consequuntur impedit eligendi laborum adipisci animi. Lorem ipsum dolor
         sit amet consectetur adipisicing elit.
       </p>
-      <h3>Ustawienia drużyny</h3>
+      <h1>Ustawienia drużyny</h1>
       <p>
         Ea, quis quas architecto eos quaerat velit pariatur, alias, eius ipsam
         tenetur neque quisquam. Sint iusto similique excepturi voluptas

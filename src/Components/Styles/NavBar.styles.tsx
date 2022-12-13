@@ -46,7 +46,7 @@ export const StyledNavBar = styled.nav`
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    animation: animateLava 90s infinite;
+    animation: animateLava 90s infinite linear;
     text-shadow: 0px 0px 5px #be2a0400;
     transition: text-shadow 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;

@@ -93,6 +93,7 @@ export const SignIn = () => {
           variant="standard"
           placeholder="adres email"
           sx={{ marginTop: "1em" }}
+          name="e-mail"
         />
         <TextField
           {...passwordError}
@@ -103,6 +104,7 @@ export const SignIn = () => {
           variant="standard"
           placeholder="hasło"
           type="password"
+          name="password"
         />
         <div style={{ height: "63.5px", paddingTop: "0.5em" }}>
           Zapomniałeś hasła? Nic na to nie poradzimy.

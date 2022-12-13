@@ -105,6 +105,8 @@ export const SignUp = () => {
           variant="standard"
           placeholder="adres email"
           sx={{ marginTop: "1em" }}
+          autoComplete="disabled"
+          name="e-mail"
         />
         <TextField
           InputProps={{ className: "login" }}
@@ -115,6 +117,8 @@ export const SignUp = () => {
           variant="standard"
           placeholder="hasło"
           type="password"
+          autoComplete="disabled"
+          name="new password"
         />
         <TextField
           InputProps={{ className: "login" }}
@@ -125,6 +129,8 @@ export const SignUp = () => {
           variant="standard"
           placeholder="powtórzone hasło"
           type="password"
+          autoComplete="disabled"
+          name="repeated new password"
         />
         <Button
           variant="contained"

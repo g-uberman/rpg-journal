@@ -9,7 +9,7 @@ export const Header = () => {
     <StyledHeader>
       <NavLink
         id="headerLink"
-        to="/party"
+        to="/settings"
         className={({ isActive }) => (isActive ? activeClassName : undefined)}
       ></NavLink>
     </StyledHeader>
