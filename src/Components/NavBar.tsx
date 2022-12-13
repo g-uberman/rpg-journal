@@ -5,7 +5,7 @@ import { Context } from "../ContextProvider";
 
 
 export const PartyHeader = () => {
-  const { userEmail, setEmail, party, setParty } = useContext(Context);
+  const { party, setParty } = useContext(Context);
 
   let activeClassName = "selectedNav";
   const partyName = ""
@@ -35,7 +35,7 @@ export const NavBar = () => {
       <ul>
         <li>
           <NavLink
-            to="/members"
+            to="/party"
             className={({ isActive }) =>
               isActive ? activeClassName : undefined
             }

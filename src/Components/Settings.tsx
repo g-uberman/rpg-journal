@@ -6,11 +6,12 @@ import { firebaseAuth } from "..";
 import { signOut } from "firebase/auth";
 
 export const Settings = () => {
-  const { userEmail, party, setParty } = useContext(Context);
+  const { userEmail, setEmail, party, setParty } = useContext(Context);
   const navigate = useNavigate();
 
   const handleLogOut = async (): Promise<void> => {
     await signOut(firebaseAuth);
+    setEmail("");
     navigate("/signin");
   };
 
