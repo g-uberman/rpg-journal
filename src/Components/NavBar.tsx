@@ -24,10 +24,14 @@ export const PartyHeader = () => {
 };
 
 export const NavBar = () => {
+  const { userEmail, setEmail, party, setParty } = useContext(Context);
+
   let activeClassName = "selectedNav";
 
   return (
     <StyledNavBar>
+      {userEmail && 
+      
       <ul>
         <li>
           <NavLink
@@ -70,6 +74,7 @@ export const NavBar = () => {
           </NavLink>
         </li>
       </ul>
+      }
     </StyledNavBar>
   );
 };
