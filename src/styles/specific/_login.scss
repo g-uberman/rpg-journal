@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const StyledLoginContainer = styled.div`
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,4 +7,4 @@ export const StyledLoginContainer = styled.div`
   @media screen and (min-width: 700px) {
     padding-right: 140px;
   }
-`;
+}

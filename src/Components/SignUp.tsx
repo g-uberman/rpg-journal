@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
-import { StyledLoginContainer } from "./Styles/Login.styles";
 import { FormControl, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
@@ -88,7 +87,7 @@ export const SignUp = () => {
   };
 
   return (
-    <StyledLoginContainer>
+    <div className="login">
       <p style={{ marginBottom: "3em" }}>
         Molestiae culpa sequi assumenda cumque cum accusamus dolore. Corrupti
         deleniti, iure facere molestiae expedita ratione laudantium minima saepe
@@ -97,7 +96,7 @@ export const SignUp = () => {
       <h1>Zarejestruj się</h1>
       <FormControl>
         <TextField
-          InputProps={{ className: "login" }}
+          InputProps={{ className: "auth" }}
           {...emailError}
           // {...emailLabels}
           onChange={(event) => setRegisterEmail(event.target.value)}
@@ -109,7 +108,7 @@ export const SignUp = () => {
           name="e-mail"
         />
         <TextField
-          InputProps={{ className: "login" }}
+          InputProps={{ className: "auth" }}
           {...passwordError}
           // {...passwordLabels}
           onChange={(event) => setRegisterPassword(event.target.value)}
@@ -121,7 +120,7 @@ export const SignUp = () => {
           name="new password"
         />
         <TextField
-          InputProps={{ className: "login" }}
+          InputProps={{ className: "auth" }}
           {...passwordError}
           // {...password2Labels}
           onChange={(event) => setRepeatedPassword(event.target.value)}
@@ -150,6 +149,6 @@ export const SignUp = () => {
           <Link to={{ pathname: "/signin" }}>logowania.</Link>
         </div>
       </FormControl>
-    </StyledLoginContainer>
+    </div>
   );
 };

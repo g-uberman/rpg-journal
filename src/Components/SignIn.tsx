@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
-import { StyledLoginContainer } from "./Styles/Login.styles";
 import { FormControl, TextField, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -76,7 +75,7 @@ export const SignIn = () => {
   };
 
   return (
-    <StyledLoginContainer>
+    <div className="login">
       <p style={{ marginBottom: "3em" }}>
         Molestiae culpa sequi assumenda cumque cum accusamus dolore. Corrupti
         deleniti, iure facere molestiae expedita ratione laudantium minima saepe
@@ -87,7 +86,7 @@ export const SignIn = () => {
         <TextField
           {...emailError}
           // {...emailLabels}
-          InputProps={{ className: "login" }}
+          InputProps={{ className: "auth" }}
           onChange={(event) => setLogin(event.target.value)}
           helperText=" "
           variant="standard"
@@ -98,7 +97,7 @@ export const SignIn = () => {
         <TextField
           {...passwordError}
           // {...passwordLabels}
-          InputProps={{ className: "login" }}
+          InputProps={{ className: "auth" }}
           onChange={(event) => setPassword(event.target.value)}
           helperText=" "
           variant="standard"
@@ -127,6 +126,6 @@ export const SignIn = () => {
           <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
         </div>
       </FormControl>
-    </StyledLoginContainer>
+    </div>
   );
 };
