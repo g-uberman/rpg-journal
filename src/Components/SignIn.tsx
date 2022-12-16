@@ -1,10 +1,18 @@
 import React, { useState, useContext } from "react";
 import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
-import { FormControl, TextField, Button } from "@mui/material";
+import {
+  FormControl,
+  TextField,
+  Button,
+  InputAdornment,
+  IconButton,
+  Input,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const INVALID_EMAIL_ERROR = "auth/invalid-email";
 const WRONG_PASSWORD_ERROR = "auth/wrong-password";
@@ -26,6 +34,15 @@ export const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [emailError, setEmailError] = useState(noErrors);
   const [passwordError, setPasswordError] = useState(noErrors);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
 
   const clearErrors = () => {
     setTimeout(() => {
@@ -94,17 +111,28 @@ export const SignIn = () => {
           sx={{ marginTop: "1em" }}
           name="e-mail"
         />
-        <TextField
+
+        <Input
           {...passwordError}
           // {...passwordLabels}
-          InputProps={{ className: "auth" }}
-          onChange={(event) => setPassword(event.target.value)}
-          helperText=" "
-          variant="standard"
+          id="standard-adornment-password"
+          className="auth"
           placeholder="hasło"
-          type="password"
-          name="password"
+          onChange={(event) => setPassword(event.target.value)}
+          type={showPassword ? "text" : "password"}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+              >
+                {showPassword ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          }
         />
+
         <div style={{ height: "63.5px", paddingTop: "0.5em" }}>
           Zapomniałeś hasła? Nic na to nie poradzimy.
         </div>
