@@ -1,7 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
-import { FormControl, TextField, Button } from "@mui/material";
+import {
+  FormControl,
+  Input,
+  InputAdornment,
+  IconButton,
+  Button,
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -20,7 +27,6 @@ const noErrors: ErrorProps = {
 
 export const SignUp = () => {
   const { userEmail, setEmail, party, setParty } = useContext(Context);
-
   const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -28,6 +34,15 @@ export const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [emailError, setEmailError] = useState(noErrors);
   const [passwordError, setPasswordError] = useState(noErrors);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
 
   const clearErrors = () => {
     setTimeout(() => {
@@ -95,41 +110,35 @@ export const SignUp = () => {
       </p>
       <h1>Zarejestruj się</h1>
       <FormControl>
-        <TextField
-          InputProps={{ className: "auth" }}
+        <Input
           {...emailError}
           // {...emailLabels}
+          name="email"
+          autoComplete="email"
+          className="auth"
           onChange={(event) => setRegisterEmail(event.target.value)}
-          helperText=" "
-          variant="standard"
           placeholder="adres email"
-          sx={{ marginTop: "1em" }}
-          autoComplete="disabled"
-          name="e-mail"
         />
-        <TextField
-          InputProps={{ className: "auth" }}
+        <Input
           {...passwordError}
           // {...passwordLabels}
-          onChange={(event) => setRegisterPassword(event.target.value)}
-          helperText=" "
-          variant="standard"
-          placeholder="hasło"
-          type="password"
-          autoComplete="disabled"
           name="new password"
-        />
-        <TextField
-          InputProps={{ className: "auth" }}
-          {...passwordError}
-          // {...password2Labels}
-          onChange={(event) => setRepeatedPassword(event.target.value)}
-          helperText=" "
-          variant="standard"
-          placeholder="powtórzone hasło"
-          type="password"
-          autoComplete="disabled"
-          name="repeated new password"
+          autoComplete="password"
+          className="auth"
+          onChange={(event) => setRegisterPassword(event.target.value)}
+          placeholder="hasło"
+          type={showPassword ? "text" : "password"}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                onMouseDown={handleMouseDownPassword}
+              >
+                {showPassword ? <VisibilityOff /> : <Visibility />}
+              </IconButton>
+            </InputAdornment>
+          }
         />
         <Button
           variant="contained"

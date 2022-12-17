@@ -3,16 +3,15 @@ import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
 import {
   FormControl,
-  TextField,
-  Button,
+  Input,
   InputAdornment,
   IconButton,
-  Input,
+  Button,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const INVALID_EMAIL_ERROR = "auth/invalid-email";
 const WRONG_PASSWORD_ERROR = "auth/wrong-password";
@@ -100,22 +99,20 @@ export const SignIn = () => {
       </p>
       <h1>Zaloguj się</h1>
       <FormControl>
-        <TextField
+        <Input
           {...emailError}
           // {...emailLabels}
-          InputProps={{ className: "auth" }}
-          onChange={(event) => setLogin(event.target.value)}
-          helperText=" "
-          variant="standard"
+          name="email"
+          className="auth"
           placeholder="adres email"
-          sx={{ marginTop: "1em" }}
-          name="e-mail"
+          onChange={(event) => setLogin(event.target.value)}
+          type="text"
         />
 
         <Input
           {...passwordError}
           // {...passwordLabels}
-          id="standard-adornment-password"
+          name="password"
           className="auth"
           placeholder="hasło"
           onChange={(event) => setPassword(event.target.value)}
