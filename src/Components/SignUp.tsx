@@ -52,8 +52,8 @@ export const SignUp = () => {
     }, 5000);
   };
 
-  const onRegister = async (
-    event: React.MouseEvent<HTMLButtonElement>
+  const handleRegister = async (
+    event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
     if (!registerPassword || !repeatedPassword || !registerEmail) {
       setErrorMessage("errorAllFields");
@@ -80,6 +80,12 @@ export const SignUp = () => {
       handleFirebaseError(code);
     }
   };
+
+  const handleEnter = (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleRegister(null);
+    }
+  }
 
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
@@ -114,10 +120,12 @@ export const SignUp = () => {
           <Input
             {...emailError}
             // {...emailLabels}
-            name="email"
-            autoComplete="email"
+            id="registerEmail"
+            name="newEmail"
+            autoComplete="username"
             className="auth"
             onChange={(event) => setRegisterEmail(event.target.value)}
+            onKeyDown={(event) => handleEnter(event)}
             placeholder="adres email"
           />
         </FormControl>
@@ -125,10 +133,12 @@ export const SignUp = () => {
           <Input
             {...passwordError}
             // {...passwordLabels}
-            name="new password"
-            autoComplete="password"
+            id="registerPassword"
+            name="newPassword"
+            autoComplete="new-password"
             className="auth"
             onChange={(event) => setRegisterPassword(event.target.value)}
+            onKeyDown={(event) => handleEnter(event)}
             placeholder="hasło"
             type={showPassword ? "text" : "password"}
             endAdornment={
@@ -145,6 +155,7 @@ export const SignUp = () => {
           />
         </FormControl>
         <Button
+          type="submit"
           variant="contained"
           size="small"
           sx={{
@@ -153,9 +164,9 @@ export const SignUp = () => {
             outline: "1px solid #5d534d",
             border: "1px solid white",
             marginTop: "1.5em",
-            marginBottom: "3em",
+            marginBottom: "2.25em",
           }}
-          onClick={onRegister}
+          onClick={handleRegister}
         >
           Zarejestruj się
         </Button>

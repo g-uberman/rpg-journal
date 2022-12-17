@@ -52,7 +52,7 @@ export const SignIn = () => {
   };
 
   const handleLogin = async (
-    event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
     if (!login || !password) {
       setErrorMessage("errorAllFields");
@@ -69,6 +69,12 @@ export const SignIn = () => {
       handleFirebaseError(code);
     }
   };
+
+  const handleEnter = (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleLogin(null);
+    }
+  }
 
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
@@ -103,10 +109,13 @@ export const SignIn = () => {
           <Input
             {...emailError}
             // {...emailLabels}
+            id="loginEmail"
             name="email"
+            autoComplete="username"
             className="auth"
             placeholder="adres email"
             onChange={(event) => setLogin(event.target.value)}
+            onKeyDown={(event) => handleEnter(event)}
             type="text"
           />
         </FormControl>
@@ -114,10 +123,13 @@ export const SignIn = () => {
           <Input
             {...passwordError}
             // {...passwordLabels}
+            id="loginPassword"
             name="password"
+            autoComplete="current-password"
             className="auth"
             placeholder="hasło"
             onChange={(event) => setPassword(event.target.value)}
+            onKeyDown={(event) => handleEnter(event)}
             type={showPassword ? "text" : "password"}
             endAdornment={
               <InputAdornment position="end">
@@ -141,7 +153,7 @@ export const SignIn = () => {
             outline: "1px solid #5d534d",
             border: "1px solid white",
             marginTop: "1.5em",
-            marginBottom: "3em",
+            marginBottom: "2.25em",
           }}
           onClick={handleLogin}
         >
