@@ -133,7 +133,7 @@ export const SignIn = () => {
           }
         />
 
-        <div style={{ height: "63.5px", paddingTop: "0.5em" }}>
+        <div style={{ height: "63.5px", paddingTop: "2em", marginBottom: "31px"  }}>
           Zapomniałeś hasła? Nic na to nie poradzimy.
         </div>
         <Button
