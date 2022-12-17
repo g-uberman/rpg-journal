@@ -119,6 +119,8 @@ export const SignUp = () => {
           onChange={(event) => setRegisterEmail(event.target.value)}
           placeholder="adres email"
         />
+        </FormControl>
+        <FormControl>
         <Input
           {...passwordError}
           // {...passwordLabels}
@@ -140,6 +142,7 @@ export const SignUp = () => {
             </InputAdornment>
           }
         />
+        </FormControl>
         <Button
           variant="contained"
           size="small"
@@ -148,16 +151,17 @@ export const SignUp = () => {
             borderRadius: "0",
             outline: "1px solid #5d534d",
             border: "1px solid white",
+            marginTop: "1.5em",
+            marginBottom: "3em"
           }}
           onClick={onRegister}
         >
           Zarejestruj się
         </Button>
-        <div style={{ height: "63.5px", paddingTop: "2.3em" }}>
+        <div className="loginAnnotations">
           Masz już konto? Przejdź do{" "}
           <Link to={{ pathname: "/signin" }}>logowania.</Link>
         </div>
-      </FormControl>
     </div>
   );
 };

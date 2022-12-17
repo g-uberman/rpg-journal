@@ -108,7 +108,8 @@ export const SignIn = () => {
           onChange={(event) => setLogin(event.target.value)}
           type="text"
         />
-
+      </FormControl>
+      <FormControl>
         <Input
           {...passwordError}
           // {...passwordLabels}
@@ -129,28 +130,29 @@ export const SignIn = () => {
             </InputAdornment>
           }
         />
-
-        <div style={{ height: "63.5px", paddingTop: "2em", marginBottom: "31px"  }}>
-          Zapomniałeś hasła? Nic na to nie poradzimy.
-        </div>
-        <Button
-          variant="contained"
-          size="small"
-          sx={{
-            maxWidth: "10em",
-            borderRadius: "0",
-            outline: "1px solid #5d534d",
-            border: "1px solid white",
-          }}
-          onClick={handleLogin}
-        >
-          Zaloguj się
-        </Button>
-        <div style={{ height: "63.5px", paddingTop: "2.3em" }}>
-          Nie masz jeszcze konta? Przejdź do{" "}
-          <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
-        </div>
       </FormControl>
+      <Button
+        variant="contained"
+        size="small"
+        sx={{
+          maxWidth: "10em",
+          borderRadius: "0",
+          outline: "1px solid #5d534d",
+          border: "1px solid white",
+          marginTop: "1.5em",
+          marginBottom: "3em",
+        }}
+        onClick={handleLogin}
+      >
+        Zaloguj się
+      </Button>
+      <div className="loginAnnotations">
+        Nie masz jeszcze konta? Przejdź do{" "}
+        <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
+      </div>
+      <div className="loginAnnotations">
+        Zapomniałeś hasła? Nic na to nie poradzimy.
+      </div>
     </div>
   );
 };

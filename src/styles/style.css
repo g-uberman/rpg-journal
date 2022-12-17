@@ -178,6 +178,15 @@ a, a:visited {
   }
 }
 
+.auth {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.loginAnnotations {
+  margin-bottom: 0.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
