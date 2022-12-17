@@ -60,6 +60,11 @@ a, a:visited {
   -webkit-box-shadow: 0 0 0px 1000px #fcf8f4 inset;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 #scroll {
   display: grid;
   grid-template-columns: 1fr;

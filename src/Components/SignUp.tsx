@@ -108,40 +108,41 @@ export const SignUp = () => {
         deleniti, iure facere molestiae expedita ratione laudantium minima saepe
         assumenda id illum excepturi?
       </p>
-      <h1>Zarejestruj się</h1>
-      <FormControl>
-        <Input
-          {...emailError}
-          // {...emailLabels}
-          name="email"
-          autoComplete="email"
-          className="auth"
-          onChange={(event) => setRegisterEmail(event.target.value)}
-          placeholder="adres email"
-        />
+      <form>
+        <h1>Zarejestruj się</h1>
+        <FormControl>
+          <Input
+            {...emailError}
+            // {...emailLabels}
+            name="email"
+            autoComplete="email"
+            className="auth"
+            onChange={(event) => setRegisterEmail(event.target.value)}
+            placeholder="adres email"
+          />
         </FormControl>
         <FormControl>
-        <Input
-          {...passwordError}
-          // {...passwordLabels}
-          name="new password"
-          autoComplete="password"
-          className="auth"
-          onChange={(event) => setRegisterPassword(event.target.value)}
-          placeholder="hasło"
-          type={showPassword ? "text" : "password"}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-              >
-                {showPassword ? <VisibilityOff /> : <Visibility />}
-              </IconButton>
-            </InputAdornment>
-          }
-        />
+          <Input
+            {...passwordError}
+            // {...passwordLabels}
+            name="new password"
+            autoComplete="password"
+            className="auth"
+            onChange={(event) => setRegisterPassword(event.target.value)}
+            placeholder="hasło"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
         </FormControl>
         <Button
           variant="contained"
@@ -152,7 +153,7 @@ export const SignUp = () => {
             outline: "1px solid #5d534d",
             border: "1px solid white",
             marginTop: "1.5em",
-            marginBottom: "3em"
+            marginBottom: "3em",
           }}
           onClick={onRegister}
         >
@@ -162,6 +163,7 @@ export const SignUp = () => {
           Masz już konto? Przejdź do{" "}
           <Link to={{ pathname: "/signin" }}>logowania.</Link>
         </div>
+      </form>
     </div>
   );
 };

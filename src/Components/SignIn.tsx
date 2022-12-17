@@ -97,62 +97,64 @@ export const SignIn = () => {
         deleniti, iure facere molestiae expedita ratione laudantium minima saepe
         assumenda id illum excepturi?
       </p>
-      <h1>Zaloguj się</h1>
-      <FormControl>
-        <Input
-          {...emailError}
-          // {...emailLabels}
-          name="email"
-          className="auth"
-          placeholder="adres email"
-          onChange={(event) => setLogin(event.target.value)}
-          type="text"
-        />
-      </FormControl>
-      <FormControl>
-        <Input
-          {...passwordError}
-          // {...passwordLabels}
-          name="password"
-          className="auth"
-          placeholder="hasło"
-          onChange={(event) => setPassword(event.target.value)}
-          type={showPassword ? "text" : "password"}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-              >
-                {showPassword ? <VisibilityOff /> : <Visibility />}
-              </IconButton>
-            </InputAdornment>
-          }
-        />
-      </FormControl>
-      <Button
-        variant="contained"
-        size="small"
-        sx={{
-          maxWidth: "10em",
-          borderRadius: "0",
-          outline: "1px solid #5d534d",
-          border: "1px solid white",
-          marginTop: "1.5em",
-          marginBottom: "3em",
-        }}
-        onClick={handleLogin}
-      >
-        Zaloguj się
-      </Button>
-      <div className="loginAnnotations">
-        Nie masz jeszcze konta? Przejdź do{" "}
-        <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
-      </div>
-      <div className="loginAnnotations">
-        Zapomniałeś hasła? Nic na to nie poradzimy.
-      </div>
+      <form>
+        <h1>Zaloguj się</h1>
+        <FormControl>
+          <Input
+            {...emailError}
+            // {...emailLabels}
+            name="email"
+            className="auth"
+            placeholder="adres email"
+            onChange={(event) => setLogin(event.target.value)}
+            type="text"
+          />
+        </FormControl>
+        <FormControl>
+          <Input
+            {...passwordError}
+            // {...passwordLabels}
+            name="password"
+            className="auth"
+            placeholder="hasło"
+            onChange={(event) => setPassword(event.target.value)}
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Button
+          variant="contained"
+          size="small"
+          sx={{
+            maxWidth: "10em",
+            borderRadius: "0",
+            outline: "1px solid #5d534d",
+            border: "1px solid white",
+            marginTop: "1.5em",
+            marginBottom: "3em",
+          }}
+          onClick={handleLogin}
+        >
+          Zaloguj się
+        </Button>
+        <div className="loginAnnotations">
+          Nie masz jeszcze konta? Przejdź do{" "}
+          <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
+        </div>
+        <div className="loginAnnotations">
+          Zapomniałeś hasła? Nic na to nie poradzimy.
+        </div>
+      </form>
     </div>
   );
 };
