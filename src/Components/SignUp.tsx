@@ -115,7 +115,7 @@ export const SignUp = () => {
         assumenda id illum excepturi?
       </p>
       <form>
-        <h1>Zarejestruj się</h1>
+        <h1>Załóż konto</h1>
         <FormControl>
           <Input
             {...emailError}
@@ -168,7 +168,7 @@ export const SignUp = () => {
           }}
           onClick={handleRegister}
         >
-          Zarejestruj się
+          Załóż konto
         </Button>
         <div className="loginAnnotations">
           Masz już konto? Przejdź do{" "}

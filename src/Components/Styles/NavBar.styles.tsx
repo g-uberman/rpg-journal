@@ -11,6 +11,10 @@ export const StyledNavBar = styled.nav`
     transition: color 0.5s ease-in-out;
   }
 
+  #partyNameStatic {
+    font-size: 1.5em;
+  }
+
   ul {
     list-style: none;
     display: flex;
