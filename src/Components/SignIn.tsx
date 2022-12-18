@@ -55,7 +55,7 @@ export const SignIn = () => {
     event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
     if (!login || !password) {
-      setErrorMessage("errorAllFields");
+      setErrorMessage("Wszystkie pola są wymagane");
       setEmailError({ error: true });
       setPasswordError({ error: true });
       clearErrors();
@@ -79,15 +79,15 @@ export const SignIn = () => {
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
       case INVALID_EMAIL_ERROR:
-        setErrorMessage("errorInvalidEmail");
+        setErrorMessage("Błędny adres e-mail");
         setEmailError({ error: true });
         break;
       case WRONG_PASSWORD_ERROR:
-        setErrorMessage("errorIncorrectPassword");
+        setErrorMessage("Błędne hasło");
         setPasswordError({ error: true });
         break;
       case USER_NOT_FOUND_ERROR:
-        setErrorMessage("errorNoAccount");
+        setErrorMessage("Konto nie istnieje");
         setEmailError({ error: true });
         break;
       default:

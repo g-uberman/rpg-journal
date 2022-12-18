@@ -30,7 +30,6 @@ export const SignUp = () => {
   const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
-  const [repeatedPassword, setRepeatedPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [emailError, setEmailError] = useState(noErrors);
   const [passwordError, setPasswordError] = useState(noErrors);
@@ -55,15 +54,9 @@ export const SignUp = () => {
   const handleRegister = async (
     event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
-    if (!registerPassword || !repeatedPassword || !registerEmail) {
-      setErrorMessage("errorAllFields");
+    if (!registerPassword || !registerEmail) {
+      setErrorMessage("Wszystkie pola są wymagane");
       setEmailError({ error: true });
-      setPasswordError({ error: true });
-      clearErrors();
-      return;
-    }
-    if (registerPassword !== repeatedPassword) {
-      setErrorMessage("errorPasswordsDifferent");
       setPasswordError({ error: true });
       clearErrors();
       return;
@@ -90,15 +83,15 @@ export const SignUp = () => {
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
       case WEAK_PASSWORD_ERROR:
-        setErrorMessage("errorWeakPassword");
+        setErrorMessage("Hasło musi zawierać przynajmniej 6 znaków");
         setPasswordError({ error: true });
         break;
       case INVALID_EMAIL_ERROR:
-        setErrorMessage("errorInvalidEmail");
+        setErrorMessage("Błędny adres e-mail");
         setEmailError({ error: true });
         break;
       case USER_ALREADY_EXISTS_ERROR:
-        setErrorMessage("errorAlreadyExists");
+        setErrorMessage("Konto na ten adres już istnieje");
         setEmailError({ error: true });
         break;
       default:
