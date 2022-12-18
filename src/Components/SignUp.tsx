@@ -149,7 +149,6 @@ export const SignUp = () => {
         </FormControl>
         <div className="loginError">{errorMessage}</div>
         <Button
-          type="submit"
           variant="contained"
           size="small"
           sx={{
