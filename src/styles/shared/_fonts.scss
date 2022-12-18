@@ -49,3 +49,11 @@ a, a:visited {
     font-weight: bold;
 }
 
+// ERRORS
+
+.loginError {
+    color: $error;
+    height: 1em;
+    margin-bottom: -0.5em;
+    font-weight: 700;
+}

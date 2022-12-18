@@ -144,6 +144,7 @@ export const SignIn = () => {
             }
           />
         </FormControl>
+        <div className="loginError">{errorMessage}</div>
         <Button
           variant="contained"
           size="small"

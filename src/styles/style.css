@@ -42,6 +42,13 @@ a, a:visited {
   font-weight: bold;
 }
 
+.loginError {
+  color: #d33131;
+  height: 1em;
+  margin-bottom: -0.5em;
+  font-weight: 700;
+}
+
 .auth {
   background: #fcf8f4;
 }
