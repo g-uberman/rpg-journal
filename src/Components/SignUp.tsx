@@ -43,11 +43,17 @@ export const SignUp = () => {
     event.preventDefault();
   };
 
+  const showErrorMessage = (message: string) => {
+    setErrorMessage(message);
+    document.getElementsByClassName("loginError")[0].classList.add("visible");
+  }
+
   const clearErrors = () => {
     setTimeout(() => {
       setErrorMessage("");
       setEmailError(noErrors);
       setPasswordError(noErrors);
+      document.getElementsByClassName("loginError")[0].classList.remove("visible");
     }, 5000);
   };
 
@@ -55,7 +61,7 @@ export const SignUp = () => {
     event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
     if (!registerPassword || !registerEmail) {
-      setErrorMessage("Wszystkie pola są wymagane");
+      showErrorMessage("Wszystkie pola są wymagane");
       setEmailError({ error: true });
       setPasswordError({ error: true });
       clearErrors();
@@ -83,15 +89,15 @@ export const SignUp = () => {
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
       case WEAK_PASSWORD_ERROR:
-        setErrorMessage("Hasło musi zawierać przynajmniej 6 znaków");
+        showErrorMessage("Hasło musi zawierać przynajmniej 6 znaków");
         setPasswordError({ error: true });
         break;
       case INVALID_EMAIL_ERROR:
-        setErrorMessage("Błędny adres e-mail");
+        showErrorMessage("Błędny adres e-mail");
         setEmailError({ error: true });
         break;
       case USER_ALREADY_EXISTS_ERROR:
-        setErrorMessage("Konto na ten adres już istnieje");
+        showErrorMessage("Konto na ten adres już istnieje");
         setEmailError({ error: true });
         break;
       default:

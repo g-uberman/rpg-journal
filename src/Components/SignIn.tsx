@@ -43,11 +43,17 @@ export const SignIn = () => {
     event.preventDefault();
   };
 
+  const showErrorMessage = (message: string) => {
+    setErrorMessage(message);
+    document.getElementsByClassName("loginError")[0].classList.add("visible");
+  }
+
   const clearErrors = () => {
     setTimeout(() => {
       setErrorMessage("");
       setEmailError(noErrors);
       setPasswordError(noErrors);
+      document.getElementsByClassName("loginError")[0].classList.remove("visible");
     }, 5000);
   };
 
@@ -55,7 +61,7 @@ export const SignIn = () => {
     event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
     if (!login || !password) {
-      setErrorMessage("Wszystkie pola są wymagane");
+      showErrorMessage("Wszystkie pola są wymagane");
       setEmailError({ error: true });
       setPasswordError({ error: true });
       clearErrors();
@@ -79,15 +85,15 @@ export const SignIn = () => {
   const handleFirebaseError = (code: unknown) => {
     switch (code) {
       case INVALID_EMAIL_ERROR:
-        setErrorMessage("Błędny adres e-mail");
+        showErrorMessage("Błędny adres e-mail");
         setEmailError({ error: true });
         break;
       case WRONG_PASSWORD_ERROR:
-        setErrorMessage("Błędne hasło");
+        showErrorMessage("Błędne hasło");
         setPasswordError({ error: true });
         break;
       case USER_NOT_FOUND_ERROR:
-        setErrorMessage("Konto nie istnieje");
+        showErrorMessage("Konto nie istnieje");
         setEmailError({ error: true });
         break;
       default:

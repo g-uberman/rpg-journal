@@ -56,4 +56,10 @@ a, a:visited {
     height: 1em;
     margin-bottom: -0.5em;
     font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.3s
+}
+
+.visible {
+    opacity: 1;
 }
