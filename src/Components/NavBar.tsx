@@ -9,7 +9,7 @@ export const PartyHeader = () => {
   let activeClassName = "selectedNav";
 
   return (
-    <StyledNavBar id="partyHeader">
+    <nav id="partyHeader">
       {userEmail && (
         <NavLink
           id="partyName"
@@ -20,7 +20,7 @@ export const PartyHeader = () => {
         </NavLink>
       )}
       {!userEmail && <div id="partyNameStatic">Dziennik Drużynowy</div>}
-    </StyledNavBar>
+    </nav>
   );
 };
 
@@ -30,7 +30,7 @@ export const NavBar = () => {
   let activeClassName = "selectedNav";
 
   return (
-    <StyledNavBar>
+    <nav id="navBar">
       {userEmail && (
         <ul>
           <li>
@@ -75,6 +75,6 @@ export const NavBar = () => {
           </li>
         </ul>
       )}
-    </StyledNavBar>
+    </nav>
   );
 };
