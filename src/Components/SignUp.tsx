@@ -118,7 +118,6 @@ export const SignUp = () => {
         <FormControl>
           <Input
             {...emailError}
-            // {...emailLabels}
             id="registerEmail"
             name="newEmail"
             autoComplete="username"
@@ -131,7 +130,6 @@ export const SignUp = () => {
         <FormControl>
           <Input
             {...passwordError}
-            // {...passwordLabels}
             id="registerPassword"
             name="newPassword"
             autoComplete="new-password"

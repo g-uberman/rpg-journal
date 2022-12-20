@@ -225,7 +225,6 @@ form {
   z-index: 2;
 }
 #partyName:hover {
-  /* text-shadow: 0px 0px 5px #be2a0420; */
   color: rgba(93, 83, 77, 0.5019607843);
 }
 #partyName.selectedNav {
@@ -233,7 +232,6 @@ form {
   color: rgba(0, 0, 0, 0);
 }
 #partyName:hover {
-  /* text-shadow: 0px 0px 5px #be2a0420, 0px -20px 30px #be2a0450; */
   color: rgba(93, 83, 77, 0.5019607843);
 }
 #partyName.selectedNav {
@@ -311,7 +309,6 @@ form {
   z-index: 2;
 }
 #navBar a:hover {
-  /* text-shadow: 0px 0px 5px #be2a0420; */
   color: rgba(93, 83, 77, 0.5019607843);
 }
 #navBar a.selectedNav {

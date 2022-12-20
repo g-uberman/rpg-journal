@@ -114,7 +114,6 @@ export const SignIn = () => {
         <FormControl>
           <Input
             {...emailError}
-            // {...emailLabels}
             id="loginEmail"
             name="email"
             autoComplete="username"
@@ -128,7 +127,6 @@ export const SignIn = () => {
         <FormControl>
           <Input
             {...passwordError}
-            // {...passwordLabels}
             id="loginPassword"
             name="password"
             autoComplete="current-password"
