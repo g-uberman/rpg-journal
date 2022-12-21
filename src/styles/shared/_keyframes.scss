@@ -1,0 +1,10 @@
+@keyframes animateLava {
+    from {
+      background-position-x: 0px;
+      background-position-y: 0px;
+    }
+    to {
+      background-position-x: 800px;
+      background-position-y: -800px;
+    }
+  }

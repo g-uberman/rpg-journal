@@ -1,9 +1,9 @@
-#partyName {
+// FIRE TEXT
+
+#partyName, #navBar a {
   display: block;
   text-align: center;
-  font-size: 1.5em;
   font-weight: bold;
-  color: #5d534d;
   background: url("./../img/lava.jpg");
   background-size: cover;
   -webkit-background-clip: text;
@@ -29,11 +29,6 @@
     color: #5d534d80;
   }
 
-  &.selectedNav {
-    text-shadow: 0px 0px 5px #ffc32580, 0px -20px 30px #ff9225;
-    color: #00000000;
-  }
-
   @keyframes animateLava {
     from {
       background-position-x: 0px;
@@ -46,15 +41,26 @@
   }
 }
 
+// PARTY HEADER
+
+#partyName {
+  font-size: 1.5em;
+
+  &.selectedNav {
+    text-shadow: 0px 0px 5px #ffc32580, 0px -20px 30px #ff9225;
+  }
+}
+
 #partyNameStatic {
   text-align: center;
   font-size: 1.5em;
 }
 
-#navBar {
-  text-align: center;
+// NAVBAR LIST
 
+#navBar {
   ul {
+    font-weight: bold;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -79,41 +85,5 @@
     font-size: 1.5em;
     position: absolute;
     right: 50px;
-  }
-
-  a {
-    font-weight: bold;
-    color: #5d534d;
-    background: url("./../img/lava.jpg");
-    background-size: cover;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    animation: animateLava 90s infinite linear;
-    text-shadow: 0px 0px 5px #be2a0400;
-    transition: text-shadow 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out;
-    position: relative;
-    z-index: 2;
-  }
-
-  a:hover {
-    color: #5d534d80;
-  }
-
-  a.selectedNav {
-    text-shadow: 0px 0px 5px #ffc32580;
-    color: #00000000;
-  }
-
-  @keyframes animateLava {
-    from {
-      background-position-x: 0px;
-      background-position-y: 0px;
-    }
-    to {
-      background-position-x: 800px;
-      background-position-y: -800px;
-    }
-  }
+  }  
 }
