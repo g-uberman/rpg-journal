@@ -6,16 +6,16 @@ export const Header = () => {
   let activeClassName = "glowingHeader";
 
   return (
-    <StyledHeader>
+    <header>
       <NavLink
         id="headerLink"
         to="/settings"
         className={({ isActive }) => (isActive ? activeClassName : undefined)}
       ></NavLink>
-    </StyledHeader>
+    </header>
   );
 };
 
 export const Footer = () => {
-  return <StyledFooter></StyledFooter>;
+  return <footer></footer>;
 };
