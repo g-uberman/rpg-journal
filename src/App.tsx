@@ -18,7 +18,6 @@ import { theme } from "./styles/theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-
         <div id="scroll">
         <Header />
         <main>

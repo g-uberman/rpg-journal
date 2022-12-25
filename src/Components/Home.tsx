@@ -1,9 +1,16 @@
-import React from "react";
+import { useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { Context } from "../ContextProvider";
 
 export const Home = () => {
-    return (
-        <>
-        Strona główna
-        </>
-    );
+  const navigate = useNavigate();
+  const { userEmail } = useContext(Context);
+
+  useEffect(() => {
+    if (!userEmail) {
+      navigate("/signin");
+    }
+  }, [userEmail]);
+
+  return <>Strona główna</>;
 };
