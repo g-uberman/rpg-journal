@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
 import {
@@ -34,6 +34,12 @@ export const SignIn = () => {
   const [emailError, setEmailError] = useState(noErrors);
   const [passwordError, setPasswordError] = useState(noErrors);
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    if (userEmail) {
+      navigate("/");
+    }
+  }, [userEmail]);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
