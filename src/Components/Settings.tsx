@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../ContextProvider";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,12 @@ import { signOut } from "firebase/auth";
 export const Settings = () => {
   const { userEmail, setEmail, party, setParty } = useContext(Context);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!userEmail) {
+      navigate("/signin");
+    }
+  }, []);
 
   const handleLogOut = async (): Promise<void> => {
     await signOut(firebaseAuth);

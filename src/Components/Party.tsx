@@ -1,7 +1,18 @@
-import React from "react";
+import { useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { Context } from "../ContextProvider";
 
 export const Party = () => {
-  return (
+    const navigate = useNavigate();
+    const { userEmail } = useContext(Context);
+  
+    useEffect(() => {
+      if (!userEmail) {
+        navigate("/signin");
+      }
+    }, []);
+
+    return (
     <>
       <h1>Drużynnicy</h1>
       <p>

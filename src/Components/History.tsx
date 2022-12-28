@@ -1,14 +1,25 @@
-import React from "react";
+import { useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { Context } from "../ContextProvider";
 
 export const History = () => {
+  const navigate = useNavigate();
+  const { userEmail } = useContext(Context);
+
+  useEffect(() => {
+    if (!userEmail) {
+      navigate("/signin");
+    }
+  }, []);
+
   return (
     <>
       <h1>Historia</h1>
       <p>
-        Ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-        culpa sequi assumenda cumque cum accusamus dolore. Corrupti deleniti,
-        iure facere molestiae expedita ratione laudantium minima saepe assumenda
-        id illum excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing
+        Ipsum dolor sit amet consectetur, adipisicing elit. Molestiae culpa
+        sequi assumenda cumque cum accusamus dolore. Corrupti deleniti, iure
+        facere molestiae expedita ratione laudantium minima saepe assumenda id
+        illum excepturi? Lorem, ipsum dolor sit amet consectetur adipisicing
         elit. Obcaecati nulla aliquid mollitia corrupti et. Esse dolorum
         asperiores quam sint velit praesentium architecto, culpa quo voluptas
         maiores nisi magnam ullam explicabo. Lorem ipsum, dolor sit amet
