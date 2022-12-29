@@ -6,6 +6,7 @@ export const NPC = () => {
   const navigate = useNavigate();
   const { userEmail } = useContext(Context);
 
+  // force out unlogged users
   useEffect(() => {
     if (!userEmail) {
       navigate("/signin");

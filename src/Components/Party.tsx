@@ -3,16 +3,17 @@ import { useNavigate } from "react-router-dom";
 import { Context } from "../ContextProvider";
 
 export const Party = () => {
-    const navigate = useNavigate();
-    const { userEmail } = useContext(Context);
-  
-    useEffect(() => {
-      if (!userEmail) {
-        navigate("/signin");
-      }
-    }, []);
+  const navigate = useNavigate();
+  const { userEmail } = useContext(Context);
 
-    return (
+  // force out unlogged users
+  useEffect(() => {
+    if (!userEmail) {
+      navigate("/signin");
+    }
+  }, []);
+
+  return (
     <>
       <h1>Drużynnicy</h1>
       <p>

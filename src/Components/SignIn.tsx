@@ -35,6 +35,7 @@ export const SignIn = () => {
   const [passwordError, setPasswordError] = useState(noErrors);
   const [showPassword, setShowPassword] = useState(false);
 
+  // force out logged users
   useEffect(() => {
     if (userEmail) {
       navigate("/");
@@ -52,14 +53,16 @@ export const SignIn = () => {
   const showErrorMessage = (message: string) => {
     setErrorMessage(message);
     document.getElementsByClassName("loginError")[0].classList.add("visible");
-  }
+  };
 
   const clearErrors = () => {
     setTimeout(() => {
       setErrorMessage("");
       setEmailError(noErrors);
       setPasswordError(noErrors);
-      document.getElementsByClassName("loginError")[0].classList.remove("visible");
+      document
+        .getElementsByClassName("loginError")[0]
+        .classList.remove("visible");
     }, 5000);
   };
 
@@ -82,11 +85,13 @@ export const SignIn = () => {
     }
   };
 
-  const handleEnter = (event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    if (event.key === 'Enter') {
+  const handleEnter = (
+    event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    if (event.key === "Enter") {
       handleLogin(null);
     }
-  }
+  };
 
   const handleFirebaseError = (code: unknown) => {
     switch (code) {

@@ -9,6 +9,7 @@ export const Settings = () => {
   const { userEmail, setEmail, party, setParty } = useContext(Context);
   const navigate = useNavigate();
 
+  // force out unlogged users
   useEffect(() => {
     if (!userEmail) {
       navigate("/signin");
@@ -53,20 +54,20 @@ export const Settings = () => {
         vel possimus. Ipsam ratione numquam exercitationem facilis.
       </p>
       <Button
-          variant="contained"
-          size="small"
-          sx={{
-            maxWidth: "10em",
-            borderRadius: "0",
-            outline: "1px solid #5d534d",
-            border: "1px solid white",
-          }}
-          onClick={() => {
-            handleLogOut();
-          }}
-        >
-          Wyloguj
-        </Button>
+        variant="contained"
+        size="small"
+        sx={{
+          maxWidth: "10em",
+          borderRadius: "0",
+          outline: "1px solid #5d534d",
+          border: "1px solid white",
+        }}
+        onClick={() => {
+          handleLogOut();
+        }}
+      >
+        Wyloguj
+      </Button>
     </>
   );
 };
