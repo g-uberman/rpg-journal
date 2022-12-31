@@ -14,6 +14,7 @@ import { Header } from "./Components/HeaderFooter";
 import { Footer } from "./Components/HeaderFooter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/theme";
+import { ResetPassword } from "./Components/ResetPassword";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/" element={<Home />}></Route>
               <Route path="/signin" element={<SignIn />}></Route>
               <Route path="/signup" element={<SignUp />}></Route>
+              <Route path="/resetpass" element={<ResetPassword />}></Route>
               <Route path="/party" element={<Party />}></Route>
               <Route path="/history" element={<History />}></Route>
               <Route path="/npc" element={<NPC />}></Route>

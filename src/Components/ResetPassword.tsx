@@ -15,7 +15,13 @@ export const ResetPassword = () => {
 
   return (
     <div className="login">
-      Reset password
+      <h1>Reset password</h1>
+      <p style={{ marginBottom: "3em" }}>
+        Molestiae culpa sequi assumenda cumque cum accusamus dolore. Corrupti
+        deleniti, iure facere molestiae expedita ratione laudantium minima saepe
+        assumenda id illum excepturi?
+      </p>
     </div>
+
   );
 };

@@ -180,7 +180,8 @@ export const SignIn = () => {
           <Link to={{ pathname: "/signup" }}>rejestracji.</Link>
         </div>
         <div className="loginAnnotations">
-          Zapomniałeś hasła? Nic na to nie poradzimy.
+          Zapomniałeś hasła? Zresetuj hasło{" "}
+          <Link to={{ pathname: "/resetpass" }}>tutaj.</Link>
         </div>
       </form>
     </div>
