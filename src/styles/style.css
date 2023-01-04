@@ -99,6 +99,11 @@ form {
     background-position-y: -800px;
   }
 }
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 #scroll {
   display: grid;
   grid-template-columns: 1fr;
