@@ -39,9 +39,9 @@ export const ResetPassword = () => {
         deleniti, iure facere molestiae expedita ratione laudantium minima saepe
         assumenda id illum excepturi?
       </p>
-      <h1>Reset password</h1>
+      <h1>Zresetuj hasło</h1>
       {!reset && (
-        <div>
+        <div className="flexColumn">
           <FormControl>
             <Input
               id="loginEmail"
