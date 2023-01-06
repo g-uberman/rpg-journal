@@ -15,6 +15,9 @@ export const ResetPassword = () => {
     if (userEmail) {
       navigate("/");
     }
+    return () => {
+      setReset(false);
+  }
   }, [userEmail]);
 
   const handleReset = async (
