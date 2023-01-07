@@ -70,12 +70,12 @@ export const ResetPassword = () => {
             }}
             onClick={handleReset}
           >
-            Zresetuj hasło
+            Zresetuj
           </Button>
         </div>
       )}
       {reset && (
-        <div className="loginAnnotations">
+        <div className="loginAnnotations" style={{ minHeight: "122px", paddingTop: "14px" }}>
           Nowe hasło zostało wysłane na adres email.
         </div>
       )}
