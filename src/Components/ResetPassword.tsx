@@ -7,7 +7,7 @@ import { FormControl, Input, Button } from "@mui/material";
 export const ResetPassword = () => {
   const { userEmail } = useContext(Context);
   const navigate = useNavigate();
-  const [login, setLogin] = useState("");
+  const [resetMail, setResetMail] = useState("");
   const [reset, setReset] = useState(false);
 
   // force out logged users
@@ -17,7 +17,8 @@ export const ResetPassword = () => {
     }
     return () => {
       setReset(false);
-  }
+      setResetMail("");
+    };
   }, [userEmail]);
 
   const handleReset = async (
@@ -52,7 +53,7 @@ export const ResetPassword = () => {
               autoComplete="username"
               className="auth"
               placeholder="adres email"
-              onChange={(event) => setLogin(event.target.value)}
+              onChange={(event) => setResetMail(event.target.value)}
               onKeyDown={(event) => handleEnter(event)}
               type="text"
             />
@@ -75,8 +76,23 @@ export const ResetPassword = () => {
         </div>
       )}
       {reset && (
-        <div className="loginAnnotations" style={{ minHeight: "122px", paddingTop: "14px" }}>
-          Nowe hasło zostało wysłane na adres email.
+        <div>
+          <div
+            className="loginAnnotations"
+            style={{
+              paddingTop: "14px",
+            }}
+          >
+            Nowe hasło zostało wysłane na adres:
+          </div>
+          <div
+            className="loginAnnotations"
+            style={{
+              minHeight: "80.5px",
+            }}
+          >
+            <strong>{resetMail}</strong>
+          </div>
         </div>
       )}
       <div className="loginAnnotations">
