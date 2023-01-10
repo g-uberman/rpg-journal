@@ -3,12 +3,14 @@ import { Context } from "./../ContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FormControl, Input, Button } from "@mui/material";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 export const ResetPassword = () => {
   const { userEmail } = useContext(Context);
   const navigate = useNavigate();
-  const [resetMail, setResetMail] = useState("");
+  const [resetEmail, setResetEmail] = useState("");
   const [reset, setReset] = useState(false);
+  const auth = getAuth();
 
   // force out logged users
   useEffect(() => {
@@ -17,15 +19,25 @@ export const ResetPassword = () => {
     }
     return () => {
       setReset(false);
-      setResetMail("");
+      setResetEmail("");
     };
   }, [userEmail]);
 
   const handleReset = async (
     event: React.MouseEvent<HTMLButtonElement> | null
   ): Promise<void> => {
-    // FIREBASE PASSWORD HANDLING NEEDS TO GO HERE
-    setReset(true);
+    // FIREBASE PASSWORD HANDLING
+    sendPasswordResetEmail(auth, resetEmail)
+      .then(() => {
+        // Password reset email sent
+        // Redirect to feedback
+        setReset(true);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
   };
 
   const handleEnter = (
@@ -53,7 +65,7 @@ export const ResetPassword = () => {
               autoComplete="username"
               className="auth"
               placeholder="adres email"
-              onChange={(event) => setResetMail(event.target.value)}
+              onChange={(event) => setResetEmail(event.target.value)}
               onKeyDown={(event) => handleEnter(event)}
               type="text"
             />
@@ -91,7 +103,7 @@ export const ResetPassword = () => {
               minHeight: "80.5px",
             }}
           >
-            <strong>{resetMail}</strong>
+            <strong>{resetEmail}</strong>
           </div>
         </div>
       )}
