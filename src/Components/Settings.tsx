@@ -27,7 +27,7 @@ export const Settings = () => {
       <h1>Ustawienia użytkownika</h1>
       {userEmail && (
         <div>
-          <h4>Zalogowano jako {userEmail}</h4>
+          <h3>Zalogowano jako {userEmail}</h3>
           <br />
         </div>
       )}
@@ -37,7 +37,7 @@ export const Settings = () => {
       </p>
       <div className="flexColumn">
         <FormControl>
-          <h4>Adres e-mail:</h4>
+          <h5>Adres e-mail:</h5>
           <Input
             id="loginEmail"
             className="auth"
@@ -51,7 +51,34 @@ export const Settings = () => {
           />
         </FormControl>
         <FormControl>
-          <h4>Imię:</h4>
+          <h5>Imię:</h5>
+          <Input
+            id="displayName"
+            className="auth"
+            type="text"
+            sx={{
+              maxWidth: "250px",
+              marginTop: "0"
+            }}
+          />
+        </FormControl>
+      </div>
+      <div className="flexColumn">
+      <h3>Zmiana hasła</h3>
+      <FormControl>
+          <h5>Aktualne hasło:</h5>
+          <Input
+            id="displayName"
+            className="auth"
+            type="text"
+            sx={{
+              maxWidth: "250px",
+              marginTop: "0"
+            }}
+          />
+        </FormControl>
+        <FormControl>
+          <h5>Nowe hasło:</h5>
           <Input
             id="displayName"
             className="auth"
