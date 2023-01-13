@@ -28,7 +28,6 @@ export const Settings = () => {
       {userEmail && (
         <div>
           <h3>Zalogowano jako {userEmail}</h3>
-          <br />
         </div>
       )}
       <p>
@@ -46,7 +45,7 @@ export const Settings = () => {
             disabled
             sx={{
               maxWidth: "250px",
-              marginTop: "0"
+              marginTop: "0",
             }}
           />
         </FormControl>
@@ -58,14 +57,14 @@ export const Settings = () => {
             type="text"
             sx={{
               maxWidth: "250px",
-              marginTop: "0"
+              marginTop: "0",
             }}
           />
         </FormControl>
       </div>
       <div className="flexColumn">
-      <h3>Zmiana hasła</h3>
-      <FormControl>
+        <h3>Zmiana hasła</h3>
+        <FormControl>
           <h5>Aktualne hasło:</h5>
           <Input
             id="displayName"
@@ -73,7 +72,7 @@ export const Settings = () => {
             type="text"
             sx={{
               maxWidth: "250px",
-              marginTop: "0"
+              marginTop: "0",
             }}
           />
         </FormControl>
@@ -85,27 +84,45 @@ export const Settings = () => {
             type="text"
             sx={{
               maxWidth: "250px",
-              marginTop: "0"
+              marginTop: "0",
             }}
           />
         </FormControl>
       </div>
-      <Button
-        variant="contained"
-        size="small"
-        sx={{
-          maxWidth: "10em",
-          borderRadius: "0",
-          outline: "1px solid #5d534d",
-          border: "1px solid white",
-          margin: "1em 0 3em"
-        }}
-        onClick={() => {
-          handleLogOut();
-        }}
-      >
-        Wyloguj
-      </Button>
+      <div className="flexColumn">
+        <Button
+          variant="contained"
+          size="small"
+          sx={{
+            maxWidth: "10em",
+            borderRadius: "0",
+            outline: "1px solid #5d534d",
+            border: "1px solid white",
+            margin: "1em 0 0",
+          }}
+          onClick={() => {
+            handleLogOut();
+          }}
+        >
+          Zmień hasło
+        </Button>
+        <Button
+          variant="contained"
+          size="small"
+          sx={{
+            maxWidth: "10em",
+            borderRadius: "0",
+            outline: "1px solid #5d534d",
+            border: "1px solid white",
+            margin: "1em 0 3em",
+          }}
+          onClick={() => {
+            handleLogOut();
+          }}
+        >
+          Wyloguj
+        </Button>
+      </div>
       <h1>Ustawienia drużyny</h1>
       <p>
         Ea, quis quas architecto eos quaerat velit pariatur, alias, eius ipsam
