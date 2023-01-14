@@ -112,6 +112,19 @@ form {
   flex-direction: column;
 }
 
+.flexRow {
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.divider {
+  width: 95%;
+  height: 2px;
+  background-color: #5d534d;
+  margin: 1em 0 2em;
+}
+
 #scroll {
   display: grid;
   grid-template-columns: 1fr;

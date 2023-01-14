@@ -83,13 +83,11 @@ export const Settings = () => {
             className="auth"
             type="text"
             sx={{
-              maxWidth: "250px",
+              width: "250px",
               marginTop: "0",
             }}
           />
         </FormControl>
-      </div>
-      <div className="flexColumn">
         <Button
           variant="contained"
           size="small"
@@ -106,6 +104,8 @@ export const Settings = () => {
         >
           Zmień hasło
         </Button>
+      </div>
+      <div className="flexColumn">
         <Button
           variant="contained"
           size="small"
@@ -114,7 +114,7 @@ export const Settings = () => {
             borderRadius: "0",
             outline: "1px solid #5d534d",
             border: "1px solid white",
-            margin: "1em 0 3em",
+            marginTop: "1em"
           }}
           onClick={() => {
             handleLogOut();
@@ -123,6 +123,7 @@ export const Settings = () => {
           Wyloguj
         </Button>
       </div>
+      <div className="divider"></div>
       <h1>Ustawienia drużyny</h1>
       <p>
         Ea, quis quas architecto eos quaerat velit pariatur, alias, eius ipsam
