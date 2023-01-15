@@ -26,7 +26,7 @@ const noErrors: ErrorProps = {
 };
 
 export const SignIn = () => {
-  const { user, setEmail, party, setParty } = useContext(Context);
+  const { user, setUser, party, setParty } = useContext(Context);
   const navigate = useNavigate();
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -78,7 +78,7 @@ export const SignIn = () => {
     }
     try {
       await signInWithEmailAndPassword(auth, login, password);
-      setEmail(login);
+      setUser(login);
       navigate("/party");
     } catch ({ code, message }) {
       handleFirebaseError(code);

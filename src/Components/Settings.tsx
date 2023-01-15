@@ -6,7 +6,7 @@ import { firebaseAuth } from "..";
 import { signOut } from "firebase/auth";
 
 export const Settings = () => {
-  const { user, setEmail, party, setParty } = useContext(Context);
+  const { user, setUser, party, setParty } = useContext(Context);
   const navigate = useNavigate();
 
   // force out unlogged users
@@ -18,7 +18,7 @@ export const Settings = () => {
 
   const handleLogOut = async (): Promise<void> => {
     await signOut(firebaseAuth);
-    setEmail("");
+    setUser("");
     navigate("/signin");
   };
 

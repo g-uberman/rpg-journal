@@ -24,7 +24,7 @@ export const PartyHeader = () => {
 };
 
 export const NavBar = () => {
-  const { user, setEmail, party, setParty } = useContext(Context);
+  const { user, setUser, party, setParty } = useContext(Context);
 
   let activeClassName = "selectedNav";
 

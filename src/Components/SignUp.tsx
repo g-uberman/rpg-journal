@@ -26,7 +26,7 @@ const noErrors: ErrorProps = {
 };
 
 export const SignUp = () => {
-  const { user, setEmail, party, setParty } = useContext(Context);
+  const { user, setUser, party, setParty } = useContext(Context);
   const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -82,7 +82,7 @@ export const SignUp = () => {
         registerEmail,
         registerPassword
       );
-      setEmail(registerEmail);
+      setUser(registerEmail);
       navigate("/settings");
     } catch ({ code, message }) {
       handleFirebaseError(code);
