@@ -1,16 +1,25 @@
 import { useContext, useEffect, useState } from "react";
 import { Context, noUser } from "../ContextProvider";
-import { Button, FormControl, Input } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  Input,
+  InputAdornment,
+  IconButton,
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { firebaseAuth } from "..";
 import { signOut } from "firebase/auth";
 
 export const Settings = () => {
   const { user, setUser, party, setParty } = useContext(Context);
+  const navigate = useNavigate();
   const [newName, setNewName] = useState(user.displayName);
   const [newPassword, setNewPassword] = useState("");
   const [currentPassword, setCurrentPassword] = useState("");
-  const navigate = useNavigate();
+  const [showPassword1, setShowPassword1] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
 
   // force out unlogged users
   useEffect(() => {
@@ -37,6 +46,20 @@ export const Settings = () => {
     // send currentName as new user.displayName to Firebase
   };
 
+  const handleClickShowPassword1 = () => {
+    setShowPassword1((show) => !show);
+  };
+
+  const handleClickShowPassword2 = () => {
+    setShowPassword2((show) => !show);
+  };
+
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <h1>Ustawienia użytkownika</h1>
@@ -48,7 +71,7 @@ export const Settings = () => {
         <h3>Dane użytkownika</h3>
         <FormControl>
           <h5>Adres e-mail:</h5>
-          <div className="flexRowSpaced settingsRow">
+          <div className="settingsRow">
             <Input
               id="loginEmail"
               className="auth"
@@ -83,9 +106,10 @@ export const Settings = () => {
         </FormControl>
         <FormControl>
           <h5>Imię:</h5>
-          <div className="flexRowSpaced settingsRow">
+          <div className="settingsRow">
             <Input
               id="displayName"
+              name="displayName"
               className="auth"
               type="text"
               defaultValue={newName}
@@ -120,30 +144,64 @@ export const Settings = () => {
         <h3>Zmiana hasła</h3>
         <FormControl>
           <h5>Aktualne hasło:</h5>
-          <div className="flexRowSpaced settingsRow">
+          <div className="settingsRow">
             <Input
+              // {...passwordError}
               id="currentPassword"
+              name="current-password"
+              autoComplete="current-password"
               className="auth"
-              type="text"
+              placeholder="hasło"
               onChange={(event) => setCurrentPassword(event.target.value)}
               onKeyDown={(event) => handleEnter(event)}
+              type={showPassword1 ? "text" : "password"}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword1}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {showPassword1 ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
               sx={{
                 width: "100%",
                 marginTop: "0",
               }}
             />
-            <div style={{ width: "100px" }}></div>
+            <div
+              style={{
+                width: "108px",
+              }}
+            ></div>
           </div>
         </FormControl>
         <FormControl>
           <h5>Nowe hasło:</h5>
-          <div className="flexRowSpaced settingsRow">
+          <div className="settingsRow">
             <Input
+              // {...passwordError}
               id="newPassword"
+              name="new-password"
+              autoComplete="new-password"
               className="auth"
-              type="text"
+              placeholder="nowe hasło"
               onChange={(event) => setNewPassword(event.target.value)}
               onKeyDown={(event) => handleEnter(event)}
+              type={showPassword2 ? "text" : "password"}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword2}
+                    onMouseDown={handleMouseDownPassword}
+                  >
+                    {showPassword2 ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
               sx={{
                 width: "100%",
                 marginTop: "0",
