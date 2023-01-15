@@ -78,7 +78,7 @@ export const SignIn = () => {
     }
     try {
       await signInWithEmailAndPassword(auth, login, password);
-      setUser(login);
+      setUser({...user, email: login})
       navigate("/party");
     } catch ({ code, message }) {
       handleFirebaseError(code);

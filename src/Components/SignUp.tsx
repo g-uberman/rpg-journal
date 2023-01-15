@@ -82,7 +82,7 @@ export const SignUp = () => {
         registerEmail,
         registerPassword
       );
-      setUser(registerEmail);
+      setUser({...user, email: registerEmail});
       navigate("/settings");
     } catch ({ code, message }) {
       handleFirebaseError(code);

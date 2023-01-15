@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { Context } from "../ContextProvider";
+import { Context, noUser } from "../ContextProvider";
 import { Button, FormControl, Input } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { firebaseAuth } from "..";
@@ -18,7 +18,7 @@ export const Settings = () => {
 
   const handleLogOut = async (): Promise<void> => {
     await signOut(firebaseAuth);
-    setUser("");
+    setUser(noUser);
     navigate("/signin");
   };
 
