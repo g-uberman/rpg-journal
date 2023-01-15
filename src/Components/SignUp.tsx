@@ -26,7 +26,7 @@ const noErrors: ErrorProps = {
 };
 
 export const SignUp = () => {
-  const { userEmail, setEmail, party, setParty } = useContext(Context);
+  const { user, setEmail, party, setParty } = useContext(Context);
   const navigate = useNavigate();
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -37,10 +37,10 @@ export const SignUp = () => {
 
   // force out logged users
   useEffect(() => {
-    if (userEmail) {
+    if (user) {
       navigate("/");
     }
-  }, [userEmail]);
+  }, [user]);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 

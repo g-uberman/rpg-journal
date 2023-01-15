@@ -4,11 +4,11 @@ import { Context } from "../ContextProvider";
 
 export const Party = () => {
   const navigate = useNavigate();
-  const { userEmail } = useContext(Context);
+  const { user } = useContext(Context);
 
   // force out unlogged users
   useEffect(() => {
-    if (!userEmail) {
+    if (!user) {
       navigate("/signin");
     }
   }, []);

@@ -6,7 +6,7 @@ import { FormControl, Input, Button } from "@mui/material";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 export const ResetPassword = () => {
-  const { userEmail } = useContext(Context);
+  const { user } = useContext(Context);
   const navigate = useNavigate();
   const [resetEmail, setResetEmail] = useState("");
   const [reset, setReset] = useState(false);
@@ -14,14 +14,14 @@ export const ResetPassword = () => {
 
   // force out logged users
   useEffect(() => {
-    if (userEmail) {
+    if (user) {
       navigate("/");
     }
     return () => {
       setReset(false);
       setResetEmail("");
     };
-  }, [userEmail]);
+  }, [user]);
 
   const handleReset = async (
     event: React.MouseEvent<HTMLButtonElement> | null

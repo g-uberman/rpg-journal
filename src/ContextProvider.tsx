@@ -1,8 +1,8 @@
 import { createContext, FC, ReactElement, useState } from "react";
 
 interface ContextState {
-  userEmail: string;
-  setEmail: (userEmail: string) => void;
+  user: string;
+  setEmail: (user: string) => void;
   party: string;
   setParty: (setParty: string) => void;
 }
@@ -14,13 +14,13 @@ const defaultContextValue = {} as ContextState;
 export const Context = createContext(defaultContextValue);
 
 export const ContextProvider: FC<ContextProviderProps> = ({ children }) => {
-  const [userEmail, setEmail] = useState("");
+  const [user, setEmail] = useState("");
   const [party, setParty] = useState("");
 
   return (
     <Context.Provider
       value={{
-        userEmail,
+        user,
         setEmail,
         party,
         setParty,

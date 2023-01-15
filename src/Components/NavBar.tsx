@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import { Context } from "../ContextProvider";
 
 export const PartyHeader = () => {
-  const { userEmail, party, setParty } = useContext(Context);
+  const { user, party, setParty } = useContext(Context);
 
   let activeClassName = "selectedNav";
 
   return (
     <nav id="partyHeader">
-      {userEmail && (
+      {user && (
         <NavLink
           id="partyName"
           to="/settings"
@@ -18,19 +18,19 @@ export const PartyHeader = () => {
           {party || "Dziennik Drużynowy"}
         </NavLink>
       )}
-      {!userEmail && <div id="partyNameStatic">Dziennik Drużynowy</div>}
+      {!user && <div id="partyNameStatic">Dziennik Drużynowy</div>}
     </nav>
   );
 };
 
 export const NavBar = () => {
-  const { userEmail, setEmail, party, setParty } = useContext(Context);
+  const { user, setEmail, party, setParty } = useContext(Context);
 
   let activeClassName = "selectedNav";
 
   return (
     <nav id="navBar">
-      {userEmail && (
+      {user && (
         <ul>
           <li>
             <NavLink

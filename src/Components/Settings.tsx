@@ -6,12 +6,12 @@ import { firebaseAuth } from "..";
 import { signOut } from "firebase/auth";
 
 export const Settings = () => {
-  const { userEmail, setEmail, party, setParty } = useContext(Context);
+  const { user, setEmail, party, setParty } = useContext(Context);
   const navigate = useNavigate();
 
   // force out unlogged users
   useEffect(() => {
-    if (!userEmail) {
+    if (!user) {
       navigate("/signin");
     }
   }, []);
@@ -38,7 +38,7 @@ export const Settings = () => {
               id="loginEmail"
               className="auth"
               type="text"
-              value={userEmail}
+              value={user}
               disabled
               sx={{
                 width: "100%",
