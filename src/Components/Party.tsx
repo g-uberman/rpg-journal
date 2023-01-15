@@ -8,7 +8,7 @@ export const Party = () => {
 
   // force out unlogged users
   useEffect(() => {
-    if (!user) {
+    if (!user.email) {
       navigate("/signin");
     }
   }, []);

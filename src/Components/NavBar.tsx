@@ -30,7 +30,7 @@ export const NavBar = () => {
 
   return (
     <nav id="navBar">
-      {user && (
+      {user.email && (
         <ul>
           <li>
             <NavLink

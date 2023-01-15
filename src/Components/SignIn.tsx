@@ -37,7 +37,7 @@ export const SignIn = () => {
 
   // force out logged users
   useEffect(() => {
-    if (user) {
+    if (user.email) {
       navigate("/");
     }
   }, [user]);
