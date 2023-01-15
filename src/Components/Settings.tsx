@@ -38,8 +38,8 @@ export const Settings = () => {
               id="loginEmail"
               className="auth"
               type="text"
-              value={user}
-              disabled
+              value={user.email}
+              readOnly
               sx={{
                 width: "100%",
                 marginTop: "0",
