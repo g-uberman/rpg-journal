@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context, noUser } from "../ContextProvider";
 import { Button, FormControl, Input } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,9 @@ import { signOut } from "firebase/auth";
 
 export const Settings = () => {
   const { user, setUser, party, setParty } = useContext(Context);
+  const [newName, setNewName] = useState(user.displayName);
+  const [newPassword, setNewPassword] = useState("");
+  const [currentPassword, setCurrentPassword] = useState("");
   const navigate = useNavigate();
 
   // force out unlogged users
@@ -22,6 +25,18 @@ export const Settings = () => {
     navigate("/signin");
   };
 
+  const handleEnter = (
+    event: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    if (event.key === "Enter" && (document.activeElement as HTMLElement)) {
+      (document.activeElement as HTMLElement).blur();
+    }
+  };
+
+  const changeDisplayName = () => {
+    // send currentName as new user.displayName to Firebase
+  };
+
   return (
     <>
       <h1>Ustawienia użytkownika</h1>
@@ -30,7 +45,7 @@ export const Settings = () => {
         cumque cum accusamus dolore.
       </p>
       <div className="flexColumn">
-      <h3>Dane użytkownika</h3>
+        <h3>Dane użytkownika</h3>
         <FormControl>
           <h5>Adres e-mail:</h5>
           <div className="flexRowSpaced settingsRow">
@@ -54,8 +69,9 @@ export const Settings = () => {
                 border: "1px solid white",
                 paddingTop: "0",
                 paddingBottom: "0",
-                scale: "70%",
+                scale: "80%",
                 width: "100px",
+                marginBottom: "10px",
               }}
               onClick={() => {
                 handleLogOut();
@@ -72,6 +88,9 @@ export const Settings = () => {
               id="displayName"
               className="auth"
               type="text"
+              defaultValue={newName}
+              onChange={(event) => setNewName(event.target.value)}
+              onKeyDown={(event) => handleEnter(event)}
               sx={{
                 width: "100%",
                 marginTop: "0",
@@ -86,9 +105,11 @@ export const Settings = () => {
                 border: "1px solid white",
                 paddingTop: "0",
                 paddingBottom: "0",
-                scale: "70%",
+                scale: "80%",
                 width: "100px",
+                marginBottom: "10px",
               }}
+              onClick={changeDisplayName}
             >
               Zmień
             </Button>
@@ -99,46 +120,51 @@ export const Settings = () => {
         <h3>Zmiana hasła</h3>
         <FormControl>
           <h5>Aktualne hasło:</h5>
-        <div className="flexRowSpaced settingsRow">
-          <Input
-            id="displayName"
-            className="auth"
-            type="text"
-            sx={{
-              width: "100%",
-              marginTop: "0",
-            }}
-          />
-          <div style={{ width: "100px" }}></div>
+          <div className="flexRowSpaced settingsRow">
+            <Input
+              id="currentPassword"
+              className="auth"
+              type="text"
+              onChange={(event) => setCurrentPassword(event.target.value)}
+              onKeyDown={(event) => handleEnter(event)}
+              sx={{
+                width: "100%",
+                marginTop: "0",
+              }}
+            />
+            <div style={{ width: "100px" }}></div>
           </div>
         </FormControl>
         <FormControl>
           <h5>Nowe hasło:</h5>
           <div className="flexRowSpaced settingsRow">
-          <Input
-            id="displayName"
-            className="auth"
-            type="text"
-            sx={{
-              width: "100%",
-              marginTop: "0",
-            }}
-          />
-        <Button
-          variant="contained"
-          size="small"
-          sx={{
-            borderRadius: "0",
-            outline: "1px solid #5d534d",
-            border: "1px solid white",
-            paddingTop: "0",
-            paddingBottom: "0",
-            scale: "70%",
-            width: "100px",
-          }}
-        >
-          Zmień
-        </Button>
+            <Input
+              id="newPassword"
+              className="auth"
+              type="text"
+              onChange={(event) => setNewPassword(event.target.value)}
+              onKeyDown={(event) => handleEnter(event)}
+              sx={{
+                width: "100%",
+                marginTop: "0",
+              }}
+            />
+            <Button
+              variant="contained"
+              size="small"
+              sx={{
+                borderRadius: "0",
+                outline: "1px solid #5d534d",
+                border: "1px solid white",
+                paddingTop: "0",
+                paddingBottom: "0",
+                scale: "80%",
+                width: "100px",
+                marginBottom: "10px",
+              }}
+            >
+              Zmień
+            </Button>
           </div>
         </FormControl>
       </div>
