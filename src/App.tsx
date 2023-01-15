@@ -1,4 +1,4 @@
-import React from "react";
+import { useContext, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { NavBar, PartyHeader } from "./Components/NavBar";
 import { Home } from "./Components/Home";
@@ -15,8 +15,24 @@ import { Footer } from "./Components/HeaderFooter";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./styles/theme";
 import { ResetPassword } from "./Components/ResetPassword";
+import { onAuthStateChanged } from "firebase/auth";
+import { firebaseAuth, firebaseDb } from "./index";
+import { Context, noUser } from "./ContextProvider";
 
 function App() {
+  const { user, setUser } = useContext(Context);
+
+  useEffect((): void => {
+    onAuthStateChanged(firebaseAuth, async (userFB) => {
+      if (userFB) {
+        const userEmail = userFB.email;
+        setUser({...user, email: userEmail || ""});
+      } else {
+        setUser(noUser);
+      }
+    });
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
         <div id="scroll">
