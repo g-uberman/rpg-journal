@@ -118,6 +118,12 @@ form {
   flex-direction: row;
 }
 
+.flexRowSpaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .divider {
   width: 95%;
   height: 2px;
@@ -363,6 +369,11 @@ footer {
   background-position-y: top, bottom, center;
   z-index: 1;
   box-shadow: 10px 20px 5px 0px rgba(0, 0, 0, 0.5333333333);
+}
+
+.settingsRow {
+  width: 80%;
+  gap: 30px;
 }
 
 * {

@@ -25,104 +25,124 @@ export const Settings = () => {
   return (
     <>
       <h1>Ustawienia użytkownika</h1>
-      {userEmail && (
-        <div>
-          <h3>Zalogowano jako {userEmail}</h3>
-        </div>
-      )}
       <p>
         Amet consectetur, adipisicing elit. Molestiae culpa sequi assumenda
         cumque cum accusamus dolore.
       </p>
       <div className="flexColumn">
+      <h3>Dane użytkownika</h3>
         <FormControl>
           <h5>Adres e-mail:</h5>
-          <Input
-            id="loginEmail"
-            className="auth"
-            type="text"
-            value={userEmail}
-            disabled
-            sx={{
-              maxWidth: "250px",
-              marginTop: "0",
-            }}
-          />
+          <div className="flexRowSpaced settingsRow">
+            <Input
+              id="loginEmail"
+              className="auth"
+              type="text"
+              value={userEmail}
+              disabled
+              sx={{
+                width: "100%",
+                marginTop: "0",
+              }}
+            />
+            <Button
+              variant="contained"
+              size="small"
+              sx={{
+                borderRadius: "0",
+                outline: "1px solid #5d534d",
+                border: "1px solid white",
+                paddingTop: "0",
+                paddingBottom: "0",
+                scale: "70%",
+                width: "100px",
+              }}
+              onClick={() => {
+                handleLogOut();
+              }}
+            >
+              Wyloguj
+            </Button>
+          </div>
         </FormControl>
         <FormControl>
           <h5>Imię:</h5>
-          <Input
-            id="displayName"
-            className="auth"
-            type="text"
-            sx={{
-              maxWidth: "250px",
-              marginTop: "0",
-            }}
-          />
+          <div className="flexRowSpaced settingsRow">
+            <Input
+              id="displayName"
+              className="auth"
+              type="text"
+              sx={{
+                width: "100%",
+                marginTop: "0",
+              }}
+            />
+            <Button
+              variant="contained"
+              size="small"
+              sx={{
+                borderRadius: "0",
+                outline: "1px solid #5d534d",
+                border: "1px solid white",
+                paddingTop: "0",
+                paddingBottom: "0",
+                scale: "70%",
+                width: "100px",
+              }}
+            >
+              Zmień
+            </Button>
+          </div>
         </FormControl>
       </div>
       <div className="flexColumn">
         <h3>Zmiana hasła</h3>
         <FormControl>
           <h5>Aktualne hasło:</h5>
+        <div className="flexRowSpaced settingsRow">
           <Input
             id="displayName"
             className="auth"
             type="text"
             sx={{
-              maxWidth: "250px",
+              width: "100%",
               marginTop: "0",
             }}
           />
+          <div style={{ width: "100px" }}></div>
+          </div>
         </FormControl>
         <FormControl>
           <h5>Nowe hasło:</h5>
+          <div className="flexRowSpaced settingsRow">
           <Input
             id="displayName"
             className="auth"
             type="text"
             sx={{
-              width: "250px",
+              width: "100%",
               marginTop: "0",
             }}
           />
+        <Button
+          variant="contained"
+          size="small"
+          sx={{
+            borderRadius: "0",
+            outline: "1px solid #5d534d",
+            border: "1px solid white",
+            paddingTop: "0",
+            paddingBottom: "0",
+            scale: "70%",
+            width: "100px",
+          }}
+        >
+          Zmień
+        </Button>
+          </div>
         </FormControl>
-        <Button
-          variant="contained"
-          size="small"
-          sx={{
-            maxWidth: "10em",
-            borderRadius: "0",
-            outline: "1px solid #5d534d",
-            border: "1px solid white",
-            margin: "1em 0 0",
-          }}
-          onClick={() => {
-            handleLogOut();
-          }}
-        >
-          Zmień hasło
-        </Button>
       </div>
-      <div className="flexColumn">
-        <Button
-          variant="contained"
-          size="small"
-          sx={{
-            maxWidth: "10em",
-            borderRadius: "0",
-            outline: "1px solid #5d534d",
-            border: "1px solid white",
-            marginTop: "1em"
-          }}
-          onClick={() => {
-            handleLogOut();
-          }}
-        >
-          Wyloguj
-        </Button>
-      </div>
+      <div className="flexColumn"></div>
       <div className="divider"></div>
       <h1>Ustawienia drużyny</h1>
       <p>

@@ -7,6 +7,12 @@
     flex-direction: row;
 }
 
+.flexRowSpaced {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .divider {
     width: 95%;
     height: 2px;
